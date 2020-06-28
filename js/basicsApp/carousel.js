@@ -131,7 +131,7 @@ function calculateChanges() {
 /*                      */
 /************************/
 
-const basicsStack = document.querySelector('.carousel__basics');
+const basicsStack = document.querySelector('.carousel__basics-blue');
 const basicsLetters = Array.from(basicsStack.children);
 
 const updateBasics = (targetIndex) => {
@@ -141,6 +141,10 @@ const updateBasics = (targetIndex) => {
 
     currentLetter.classList.remove('current-letter');
     targetLetter.classList.add('current-letter');
+
+    currentLetter.classList.add('hidden-letter');
+    targetLetter.classList.remove('hidden-letter');
+
 };
 
 

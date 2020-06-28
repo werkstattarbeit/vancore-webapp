@@ -92,6 +92,7 @@
 .carousel__basics-nav {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas: "basics-letter" "basics-terms";
     position: relative;
     height: 150px;
     width: 100%;
@@ -100,9 +101,30 @@
 
 
 .carousel__basics {
+    position: relative;
     display: grid;
+    grid-area: basics-letters;
     grid-template-columns: repeat(6, 1fr);
     height: 80px;
+    width: 100%;
+}
+
+.basics__term {
+    height: 80px;
+    background: #5e7aff;
+    grid-area: basics-terms;
+}
+
+.carousel__basics-blue {
+    position: absolute;
+}
+
+.hidden-letter {
+    opacity: 0;
+}
+
+.carousel__basics-white {
+    position: absolute;
 }
 
 .carousel__basics-letter {
