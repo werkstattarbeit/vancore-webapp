@@ -134,10 +134,22 @@ function calculateChanges() {
 const basicsStack = document.querySelector('.carousel__basics-blue');
 const basicsLetters = Array.from(basicsStack.children);
 
+const basicsTextStack = document.querySelector('.basics__term');
+const basicsText = Array.from(basicsTextStack.children);
+
+
+const getLetterIndex = (slideIndex) => {
+    return (slideIndex / 1);
+};
+
+
 const updateBasics = (targetIndex) => {
-    console.log(targetIndex)
+    console.log(targetIndex);
     const currentLetter = basicsStack.querySelector('.current-letter');
     const targetLetter = basicsLetters[getLetterIndex(targetIndex)];
+
+    const currentText = basicsTextStack.querySelector('.current-text');
+    const targetText = basicsText[getLetterIndex(targetIndex)];
 
     currentLetter.classList.remove('current-letter');
     targetLetter.classList.add('current-letter');
@@ -145,14 +157,11 @@ const updateBasics = (targetIndex) => {
     currentLetter.classList.add('hidden-letter');
     targetLetter.classList.remove('hidden-letter');
 
+    currentText.classList.remove('current-text');
+    targetText.classList.add('current-text');
+
+    currentText.classList.add('hidden-text');
+    targetText.classList.remove('hidden-text');
 };
-
-
-const getLetterIndex = (slideIndex) => {
-  return (slideIndex / 1);
-};
-
-
-
 
 

@@ -113,6 +113,13 @@
     height: 80px;
     background: #5e7aff;
     grid-area: basics-terms;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.basics__term-text {
+    padding-top: 10px;
+    margin: 0 auto;
 }
 
 .carousel__basics-blue {
@@ -120,6 +127,10 @@
 }
 
 .hidden-letter {
+    opacity: 0;
+}
+
+.hidden-text{
     opacity: 0;
 }
 
