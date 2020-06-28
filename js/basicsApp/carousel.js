@@ -139,7 +139,7 @@ const basicsText = Array.from(basicsTextStack.children);
 
 
 const getLetterIndex = (slideIndex) => {
-    return (slideIndex / 1);
+    return (slideIndex / 4) | 0;
 };
 
 
@@ -163,5 +163,6 @@ const updateBasics = (targetIndex) => {
     currentText.classList.add('hidden-text');
     targetText.classList.remove('hidden-text');
 };
+
 
 
