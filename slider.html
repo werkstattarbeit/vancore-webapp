@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BASICS</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/basics.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="carousel">
+    <button class="carousel__button carousel__button--left is-hidden">
+        <img src="img/arrow-left.svg">
+    </button>
+
+    <div class="carousel__basics-nav">
+        <div class="carousel__basics"> <!--cp letter grid for blue and hide non-current letters -->
+            <img src="img/blue-b.svg" class="carousel__basics-letter current-letter">
+            <img src="img/white-a.svg" class="carousel__basics-letter">
+            <img src="img/white-s.svg" class="carousel__basics-letter">
+            <img src="img/white-i.svg" class="carousel__basics-letter">
+            <img src="img/white-c.svg" class="carousel__basics-letter">
+            <img src="img/white-s.svg" class="carousel__basics-letter">
+        </div>
+        <div class="basics__term">
+        </div>
+    </div>
+
+    <div class="carousel__track-container">
+        <ul class="carousel__track">
+            <li class="carousel__slide current-slide">
+                <div class="slide__content" style="background: red;">
+
+                    <div class="slide__question">
+
+                    </div>
+                    <form class="slide__choices">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                    </form>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content" style="background: yellow;">
+
+                    <div class="slide__question">
+
+                    </div>
+                    <form class="slide__choices">
+                        <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                    </form>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content" style="background: green;">
+
+                    <div class="slide__question">
+
+                    </div>
+                    <form class="slide__choices">
+                        <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                        <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <button class="carousel__button carousel__button--right">
+        <img src="img/arrow-right.svg">
+    </button>
+
+    <div class="carousel__nav">
+        <button class="carousel__indicator current-slide"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+    </div>
+
+</div>
+
+
+<script src="js/basicsApp/carousel.js"></script>
+<script src="js/basicsApp/scores.js"></script>
+</body>
+</html>

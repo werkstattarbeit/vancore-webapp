@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test-mail</title>
+
+    <script type="javascript" language="JavaScript">
+
+        let mailadress = "info@vancore.de";
+        let subject = "Hello World Subject";
+        let message = "Hi, \\ Wie geht's?";
+        let scoresequence = [];
+
+        let maillink = document.getElementById("contact-link").addEventListener("click", changeLink());
+
+        maillink.setAttribute(href="mailto:callmetgomas@web.de");
+
+        console.log("mailto:" + mailadress + "?subject:" + subject + "?body:" + message);
+
+        function changeLink(){
+            let link = document.getElementById("contact-link");
+
+            link.href =  "mailto:" + mailadress + "?subject:" + subject + "?body:" + message;
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+    <div id="mailcontainer" style="width: 100vh; height: 100vh">
+        <div id="contact-container" style="position: absolute; margin: auto 0; background: red; width: 100px; height: 200px;">
+            <script type="text/javascript" language="javascript">
+                <!--
+                // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+                // Random encryption key feature coded by Andrew Moulden
+                // This code is freeware provided these four comment lines remain intact
+                // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+                {
+                    coded             = "vNg6@BlNY63r.v6";
+                    key             = "UkQNjRb9hVPeY0d7D5maWiOFMHrLZS2XoqlxvIfy83AJsCT6KunBzgw4G1pctE";
+                    shift           = coded.length;
+                    let mailadress  = "";
+                    let message     = "";
+                    let subject     = "";
+                    for (i=0; i<coded.length; i++) {
+                        if (key.indexOf(coded.charAt(i)) == -1) {
+                            ltr = coded.charAt(i);
+                            mailadress += (ltr);
+                        } else {
+                            ltr = (key.indexOf(coded.charAt(i)) - shift + key.length) % key.length;
+                            mailadress += (key.charAt(ltr));
+                        }
+                    }
+
+                    subject = "subject";
+                    message = "message";
+                    let mail = "mailto:" + mailadress; //+ "?subject:" + subject + "?body:" + message;
+
+                    document.write("<a href='mailto:"+link+subject+message+"'>Jetzt Kontakt aufnehmen</a>")
+                }
+                //-->
+            </script><noscript>Sorry, you need Javascript on to email me.</noscript>
+
+            <a id="contact-link">Jetzt Kontakt aufnehmen</a>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
