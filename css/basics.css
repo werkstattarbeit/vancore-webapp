@@ -3,19 +3,21 @@
 /***          Carousel           ***/
 /***                             ***/
 /***********************************/
-
+body {
+    background: #1A2247;
+}
 
 .carousel {
     position: relative;
-    height: 600px;
+    height: 45vh;
     width: 80%;
     margin: 0 auto;
-    background: #999999;
+    background: #E1F0FF;
 }
 
 
 .carousel__track-container {
-    background: #5e7aff;
+    background: #E1F0FF;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -43,14 +45,17 @@
     background: transparent;
     border: 0;
     cursor: pointer;
+    outline: none;
 }
 
 .carousel__button--left {
-    left: -40px;
+    left: 40px;
+    bottom: -65%;
 }
 
 .carousel__button--right {
-    right: -40px;
+    right: 40px;
+    bottom: -65%;
 }
 
 .carousel__button img {
@@ -60,7 +65,9 @@
 .carousel__nav {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background: #E1F0FF;
 }
 
 .carousel__indicator {
@@ -69,7 +76,7 @@
     width: 15px;
     height: 15px;
     background: rgba(0, 0, 0, .3);
-    margin: 0 15px;
+    margin: 0 10px;
     cursor: pointer;
     outline: none;
 }
@@ -94,8 +101,9 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "basics-letter" "basics-terms";
     position: relative;
+    margin: 0 auto;
     height: 150px;
-    width: 100%;
+    width: 80%;
     top: 0;
 }
 
@@ -104,14 +112,14 @@
     position: relative;
     display: grid;
     grid-area: basics-letters;
+    padding-top: 20px;
     grid-template-columns: repeat(6, 1fr);
-    height: 80px;
+    height: 60px;
     width: 100%;
 }
 
 .basics__term {
     height: 80px;
-    background: #5e7aff;
     grid-area: basics-terms;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -120,6 +128,8 @@
 .basics__term-text {
     padding-top: 10px;
     margin: 0 auto;
+    font-size: 14pt;
+    color: #ACC0FF;
 }
 
 .carousel__basics-blue {
@@ -155,20 +165,39 @@
 .slide__content {
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
     height: 100%;
 }
 
 .slide__question {
-    height: 50%
+    height: 30%;
+    width: 100%;
+    align-self: center;
+}
+
+.slide__question-text {
+    position: relative;
+    width: 67%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'GT Walsheim Bold';
+    line-height: 30pt;
+    font-size: 28pt;
 }
 
 .slide__choices {
-    width: 70%;
+    width: 80%;
     position: relative;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+
+}
+
+.slide__choices-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-self:  end;
 }
 
 .slide__choices-radio {
@@ -177,9 +206,9 @@
     appearance: none;
 
     margin: 0 auto;
-    height: 30px;
-    width: 30px;
-    border: 4px solid white;
+    height: 50px;
+    width: 50px;
+    border: 8px solid white;
     border-radius: 50px;
     cursor: pointer;
     background-color: white;
@@ -188,11 +217,19 @@
 }
 
 .slide__choices-radio:hover {
-    background-color: pink;
+    background-color: #5e7aff;
 }
 
 .slide__choices-radio:checked {
-    background-color: black;
+    background-color: #1A2247;
+}
+
+.slide__choices-subtext {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    top: 0;
+    align-self:  start;
+    text-align: center;
 }
 
 
