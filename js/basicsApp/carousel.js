@@ -14,13 +14,11 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
-
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 };
-
 
 const updateDots = (currentDot, targetDot) => {
     currentDot.classList.remove('current-slide');
@@ -28,7 +26,7 @@ const updateDots = (currentDot, targetDot) => {
 };
 
 const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-
+    console.log("current slide index: " + targetIndex + "and slides length: " + slides.length)
     if (targetIndex === 0) {
         prevButton.classList.add('is-hidden');
         nextButton.classList.remove('is-hidden');
@@ -42,8 +40,8 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
     }
 };
 
-// click left
-prevButton.addEventListener('click', e => {
+// go left function
+const goLeft = () => {
     const currentSlide = track.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
     const currentDot = dotsNav.querySelector('.current-slide');
@@ -54,11 +52,15 @@ prevButton.addEventListener('click', e => {
     moveToSlide(track, currentSlide, prevSlide);
     updateDots(currentDot, prevDot);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
+};
+// click left
+prevButton.addEventListener('click', e => {
+    goLeft()
 });
 
 
-// click right
-nextButton.addEventListener('click', e => {
+// go right function
+const goRight = () => {
     const currentSlide = track.querySelector('.current-slide');
     const nextSlide = currentSlide.nextElementSibling;
     const currentDot = dotsNav.querySelector('.current-slide');
@@ -69,6 +71,10 @@ nextButton.addEventListener('click', e => {
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
+}
+// click right
+nextButton.addEventListener('click', e => {
+    goRight()
 });
 
 
@@ -145,24 +151,48 @@ const getLetterIndex = (slideIndex) => {
 
 const updateBasics = (targetIndex) => {
     console.log(targetIndex);
+
     const currentLetter = basicsStack.querySelector('.current-letter');
     const targetLetter = basicsLetters[getLetterIndex(targetIndex)];
 
     const currentText = basicsTextStack.querySelector('.current-text');
     const targetText = basicsText[getLetterIndex(targetIndex)];
 
-    currentLetter.classList.remove('current-letter');
-    targetLetter.classList.add('current-letter');
+    // If we reach the last slide -> hide all letters
+    if (targetIndex === slides.length - 1) {
+        currentText.classList.add('hidden-text');
+        currentLetter.classList.add('hidden-letter');
+    // Else do the normal hide un-hide
+    } else {
+        currentLetter.classList.remove('current-letter');
+        targetLetter.classList.add('current-letter');
 
-    currentLetter.classList.add('hidden-letter');
-    targetLetter.classList.remove('hidden-letter');
+        currentLetter.classList.add('hidden-letter');
+        targetLetter.classList.remove('hidden-letter');
 
-    currentText.classList.remove('current-text');
-    targetText.classList.add('current-text');
+        currentText.classList.remove('current-text');
+        targetText.classList.add('current-text');
 
-    currentText.classList.add('hidden-text');
-    targetText.classList.remove('hidden-text');
+        currentText.classList.add('hidden-text');
+        targetText.classList.remove('hidden-text');
+    }
 };
 
+
+/************************/
+/*                      */
+/*        Swipes        */
+/*                      */
+/************************/
+console.log("Swipe demo")
+
+let hammertime = new Hammer(track);
+
+hammertime.on("swipeleft", function(ev) {
+    goRight()
+});
+hammertime.on("swiperight", function(ev) {
+    goLeft()
+});
 
 
