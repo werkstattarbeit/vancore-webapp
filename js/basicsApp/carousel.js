@@ -52,6 +52,7 @@ const goLeft = () => {
     moveToSlide(track, currentSlide, prevSlide);
     updateDots(currentDot, prevDot);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
+    updatePagenumber(prevIndex);
 };
 // click left
 prevButton.addEventListener('click', e => {
@@ -71,6 +72,7 @@ const goRight = () => {
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
+    updatePagenumber(nextIndex);
 }
 // click right
 nextButton.addEventListener('click', e => {
@@ -150,7 +152,6 @@ const getLetterIndex = (slideIndex) => {
 
 
 const updateBasics = (targetIndex) => {
-    console.log(targetIndex);
 
     const currentLetter = basicsStack.querySelector('.current-letter');
     const targetLetter = basicsLetters[getLetterIndex(targetIndex)];
@@ -176,6 +177,25 @@ const updateBasics = (targetIndex) => {
         currentText.classList.add('hidden-text');
         targetText.classList.remove('hidden-text');
     }
+};
+
+
+/************************/
+/*                      */
+/*  Update Pagenumber   */
+/*                      */
+/************************/
+
+
+const updatePagenumber = (targetIndex) => {
+    const currentPagetext = document.getElementById('carousel__indicator-pagenumber-content');
+    const index = targetIndex + 1;
+
+    currentPagetext.innerHTML= 'Seite ' + index + " von 25";
+
+    // TODO DOESN'T WORK YET SINCE REPLACEMENT IS OVERWRITTEN. BUT THIS WOULD FIX MULTILANG ISSUES.
+    //const updatePage = currentPagetext.innerText.replace("%",index);
+    //currentPagetext.innerHTML= updatePage;
 };
 
 
