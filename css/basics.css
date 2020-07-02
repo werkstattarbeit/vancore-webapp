@@ -106,6 +106,17 @@ body {
     background: #0000FF;
 }
 
+.carousel__breaker {
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+}
+
+.carousel__breaker.current-slide {
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    color: #0000FF;
+}
+
 .is-hidden {
     display: none;
 }
