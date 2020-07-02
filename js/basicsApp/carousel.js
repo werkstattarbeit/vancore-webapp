@@ -125,6 +125,7 @@ $('input:radio').on('click', function(e) {
     const currentIndex = slides.findIndex(slide => slide === currentSlide);
     scores[currentIndex] = inputRadioClicked.attr('value');
     updateProgressbar()
+    updateMail()
 
     // Update final score
     let currentScore = calculateChanges()
