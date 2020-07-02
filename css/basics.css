@@ -80,8 +80,8 @@ body {
 }
 
 .carousel__indicator {
-    min-width: 4px;
-    max-width: 14px;
+    width: 14px;
+    height: 14px;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -308,9 +308,8 @@ body {
     }
 
     .carousel__indicator {
-        min-width: 2vw;
-        max-width: 3vw;
-        height: 1vh;
+        width: 14px;
+        height: 14px;
         pointer-events: none;
     }
 
