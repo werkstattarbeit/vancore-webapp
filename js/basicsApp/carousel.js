@@ -116,9 +116,8 @@ dotsNav.addEventListener('click', e => {
 /*                      */
 /************************/
 
-
-let scores = [0,null,0];
-
+// Represents all inputs from every slide
+var scores = [0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null];
 
 $('input:radio').on('click', function(e) {
     let inputRadioClicked = $(e.currentTarget);
@@ -126,20 +125,34 @@ $('input:radio').on('click', function(e) {
     const currentIndex = slides.findIndex(slide => slide === currentSlide);
     scores[currentIndex] = inputRadioClicked.attr('value');
 
-    console.log(calculateChanges());
-    console.log(scores);
-    console.log('inputName='+inputRadioClicked.attr('name') + ' inputValue='+ inputRadioClicked.attr('value'));
+    // Update final score
+    let currentScore = calculateChanges()
+    const finalScore = document.getElementById('final-score');
+    if (scores.includes(0)) {
+        finalScore.innerHTML= "Bitte beantworte Frage" + getAllIndexes(scores, 0);
+    } else {
+        finalScore.innerHTML= currentScore;
+    }
+
 });
 
-
 function calculateChanges() {
-    let score = 0;
-
-    scores.forEach(function (value) {
-       score += value;
+    let sum = 0
+    scores.forEach(val => {
+        if (val != null) {
+            sum += parseInt(val)
+        }
     });
+    return sum
+}
 
-    return score;
+// Find all 0s to display which question still needs to be answered
+function getAllIndexes(arr, val) {
+    var indexes = [], i = -1;
+    while ((i = arr.indexOf(val, i+1)) != -1){
+        indexes.push(i+1);
+    }
+    return indexes;
 }
 
 
