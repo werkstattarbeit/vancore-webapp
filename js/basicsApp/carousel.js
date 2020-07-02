@@ -31,12 +31,22 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
         prevButton.classList.add('is-hidden');
         nextButton.classList.remove('is-hidden');
 
+        //Disable swipe left
+        swipeRightIsWorking = false;
+
     } else if (targetIndex === slides.length - 1) {
         prevButton.classList.remove('is-hidden');
         nextButton.classList.add('is-hidden');
+
+        //Disable swipe right
+        swipeLeftIsWorking = false;
     } else {
         prevButton.classList.remove("is-hidden");
         nextButton.classList.remove("is-hidden");
+
+        //Enable all swipe
+        swipeLeftIsWorking = true;
+        swipeRightIsWorking = true;
     }
 };
 
@@ -150,7 +160,6 @@ const getLetterIndex = (slideIndex) => {
     return (slideIndex / 4) | 0;
 };
 
-
 const updateBasics = (targetIndex) => {
 
     const currentLetter = basicsStack.querySelector('.current-letter');
@@ -204,15 +213,19 @@ const updatePagenumber = (targetIndex) => {
 /*        Swipes        */
 /*                      */
 /************************/
-console.log("Swipe demo")
-
 let hammertime = new Hammer(track);
+let swipeLeftIsWorking = true;
+let swipeRightIsWorking = false;
 
 hammertime.on("swipeleft", function(ev) {
-    goRight()
+    if (swipeLeftIsWorking) {
+        goRight()
+    }
 });
 hammertime.on("swiperight", function(ev) {
-    goLeft()
+    if (swipeRightIsWorking) {
+        goLeft()
+    }
 });
 
 
