@@ -124,6 +124,7 @@ $('input:radio').on('click', function(e) {
     const currentSlide = track.querySelector('.current-slide');
     const currentIndex = slides.findIndex(slide => slide === currentSlide);
     scores[currentIndex] = inputRadioClicked.attr('value');
+    updateProgressbar()
 
     // Update final score
     let currentScore = calculateChanges()
@@ -208,12 +209,26 @@ const updateBasics = (targetIndex) => {
 /*                      */
 /************************/
 
-
 const updatePagenumber = (targetIndex) => {
     const currentPageNumber = document.getElementById('carousel__indicator-pagenumber');
     const index = targetIndex + 1;
     currentPageNumber.innerHTML= index;
 };
+
+/************************/
+/*                      */
+/*  Update Progressbar  */
+/*                      */
+/************************/
+
+const updateProgressbar = () => {
+    let i;
+    for (i = 0; i < scores.length; i++) {
+        if (scores[i] != null && scores[i] != 0) {
+            dots[i].classList.add('carousel__indicator-checked');
+        }
+    }
+}
 
 
 /************************/

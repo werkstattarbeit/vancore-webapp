@@ -94,6 +94,10 @@ body {
     padding:0;
 }
 
+.carousel__indicator-checked {
+    background-color: rgb(75, 250, 195);
+}
+
 .carousel__indicator-pagenumber {
     display: none;
 }
