@@ -197,14 +197,9 @@ const updateBasics = (targetIndex) => {
 
 
 const updatePagenumber = (targetIndex) => {
-    const currentPagetext = document.getElementById('carousel__indicator-pagenumber-content');
+    const currentPageNumber = document.getElementById('carousel__indicator-pagenumber');
     const index = targetIndex + 1;
-
-    currentPagetext.innerHTML= 'Seite ' + index + " von 25";
-
-    // TODO DOESN'T WORK YET SINCE REPLACEMENT IS OVERWRITTEN. BUT THIS WOULD FIX MULTILANG ISSUES.
-    //const updatePage = currentPagetext.innerText.replace("%",index);
-    //currentPagetext.innerHTML= updatePage;
+    currentPageNumber.innerHTML= index;
 };
 
 
