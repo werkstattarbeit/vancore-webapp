@@ -323,8 +323,8 @@ body {
     }
 
     .carousel__indicator {
-        width: 14px;
-        height: 14px;
+        width: 25px;
+        height: 25px;
         pointer-events: none;
     }
 
