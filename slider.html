@@ -5,6 +5,7 @@
     <title>BASICS</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <link href="css/basics.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 </head>
@@ -545,7 +546,10 @@
 
             <li class="carousel__slide">
                 <div class="slide__content">
-                    Contact
+                    <div class="contact__container">
+                        <div class="contact__score">Your score <span id="final-score">0</span></div>
+                        <div id="contact__mail"></div>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -557,40 +561,40 @@
             <img src="img/arrow-left.svg">
         </button>
         <div class="carousel__indicator-pagenumber">
-            <p id="carousel__indicator-pagenumber-content">Seite 1 von 25</p>
+            <p>Seite <span id="carousel__indicator-pagenumber">1</span> von 25</p>
         </div>
         <div class="carousel__nav">
             <button class="carousel__indicator current-slide checked-slide"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
 
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
 
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
 
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
 
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
 
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
 
-            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-flag-checkered"></button>
         </div>
 
         <button class="carousel__button carousel__button--right">
@@ -602,6 +606,6 @@
 
 
 <script src="js/basicsApp/carousel.js"></script>
-<script src="js/basicsApp/scores.js"></script>
+<script src="js/basicsApp/mail.js"></script>
 </body>
 </html>

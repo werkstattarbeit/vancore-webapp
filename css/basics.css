@@ -80,8 +80,8 @@ body {
 }
 
 .carousel__indicator {
-    min-width: 4px;
-    max-width: 14px;
+    width: 14px;
+    height: 14px;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -94,12 +94,27 @@ body {
     padding:0;
 }
 
+.carousel__indicator-checked {
+    background-color: rgb(75, 250, 195);
+}
+
 .carousel__indicator-pagenumber {
     display: none;
 }
 
 .carousel__indicator.current-slide {
     background: #0000FF;
+}
+
+.carousel__breaker {
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+}
+
+.carousel__breaker.current-slide {
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    color: #0000FF;
 }
 
 .is-hidden {
@@ -703,9 +718,8 @@ body {
     }
 
     .carousel__indicator {
-        min-width: 2vw;
-        max-width: 3vw;
-        height: 1vh;
+        width: 25px;
+        height: 25px;
         pointer-events: none;
     }
 

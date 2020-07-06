@@ -31,12 +31,22 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
         prevButton.classList.add('is-hidden');
         nextButton.classList.remove('is-hidden');
 
+        //Disable swipe left
+        swipeRightIsWorking = false;
+
     } else if (targetIndex === slides.length - 1) {
         prevButton.classList.remove('is-hidden');
         nextButton.classList.add('is-hidden');
+
+        //Disable swipe right
+        swipeLeftIsWorking = false;
     } else {
         prevButton.classList.remove("is-hidden");
         nextButton.classList.remove("is-hidden");
+
+        //Enable all swipe
+        swipeLeftIsWorking = true;
+        swipeRightIsWorking = true;
     }
 };
 
@@ -106,30 +116,45 @@ dotsNav.addEventListener('click', e => {
 /*                      */
 /************************/
 
-
-let scores = [0,null,0];
-
+// Represents all inputs from every slide
+var scores = [0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null];
 
 $('input:radio').on('click', function(e) {
     let inputRadioClicked = $(e.currentTarget);
     const currentSlide = track.querySelector('.current-slide');
     const currentIndex = slides.findIndex(slide => slide === currentSlide);
     scores[currentIndex] = inputRadioClicked.attr('value');
+    updateProgressbar()
+    updateMail()
 
-    console.log(calculateChanges());
-    console.log(scores);
-    console.log('inputName='+inputRadioClicked.attr('name') + ' inputValue='+ inputRadioClicked.attr('value'));
+    // Update final score
+    let currentScore = calculateChanges()
+    const finalScore = document.getElementById('final-score');
+    if (scores.includes(0)) {
+        finalScore.innerHTML= "Bitte beantworte Frage" + getAllIndexes(scores, 0);
+    } else {
+        finalScore.innerHTML= currentScore;
+    }
+
 });
 
-
 function calculateChanges() {
-    let score = 0;
-
-    scores.forEach(function (value) {
-       score += value;
+    let sum = 0
+    scores.forEach(val => {
+        if (val != null) {
+            sum += parseInt(val)
+        }
     });
+    return sum
+}
 
-    return score;
+// Find all 0s to display which question still needs to be answered
+function getAllIndexes(arr, val) {
+    var indexes = [], i = -1;
+    while ((i = arr.indexOf(val, i+1)) != -1){
+        indexes.push(i+1);
+    }
+    return indexes;
 }
 
 
@@ -149,7 +174,6 @@ const basicsText = Array.from(basicsTextStack.children);
 const getLetterIndex = (slideIndex) => {
     return (slideIndex / 4) | 0;
 };
-
 
 const updateBasics = (targetIndex) => {
 
@@ -186,17 +210,26 @@ const updateBasics = (targetIndex) => {
 /*                      */
 /************************/
 
-
 const updatePagenumber = (targetIndex) => {
-    const currentPagetext = document.getElementById('carousel__indicator-pagenumber-content');
+    const currentPageNumber = document.getElementById('carousel__indicator-pagenumber');
     const index = targetIndex + 1;
-
-    currentPagetext.innerHTML= 'Seite ' + index + " von 25";
-
-    // TODO DOESN'T WORK YET SINCE REPLACEMENT IS OVERWRITTEN. BUT THIS WOULD FIX MULTILANG ISSUES.
-    //const updatePage = currentPagetext.innerText.replace("%",index);
-    //currentPagetext.innerHTML= updatePage;
+    currentPageNumber.innerHTML= index;
 };
+
+/************************/
+/*                      */
+/*  Update Progressbar  */
+/*                      */
+/************************/
+
+const updateProgressbar = () => {
+    let i;
+    for (i = 0; i < scores.length; i++) {
+        if (scores[i] != null && scores[i] != 0) {
+            dots[i].classList.add('carousel__indicator-checked');
+        }
+    }
+}
 
 
 /************************/
@@ -204,15 +237,19 @@ const updatePagenumber = (targetIndex) => {
 /*        Swipes        */
 /*                      */
 /************************/
-console.log("Swipe demo")
-
 let hammertime = new Hammer(track);
+let swipeLeftIsWorking = true;
+let swipeRightIsWorking = false;
 
 hammertime.on("swipeleft", function(ev) {
-    goRight()
+    if (swipeLeftIsWorking) {
+        goRight()
+    }
 });
 hammertime.on("swiperight", function(ev) {
-    goLeft()
+    if (swipeRightIsWorking) {
+        goLeft()
+    }
 });
 
 
