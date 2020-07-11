@@ -131,7 +131,7 @@ $('input:radio').on('click', function(e) {
     let currentScore = calculateChanges()
     const finalScore = document.getElementById('final-score');
     if (scores.includes(0)) {
-        finalScore.innerHTML= "Bitte beantworte Frage" + getAllIndexes(scores, 0);
+        finalScore.innerHTML= "Ihr score konnte noch nicht berechnet werden. Bitte beantworte Frage" + getAllIndexes(scores, 0);
     } else {
         finalScore.innerHTML= currentScore;
     }

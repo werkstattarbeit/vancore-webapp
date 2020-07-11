@@ -29,8 +29,8 @@ const updateMail = () => {
     body = encodeURIComponent(body);
 
     // Only add if all questions are answered
-    if (!scores.includes(0)) {
-        mailLink = document.getElementById('contact__mail');
+    //if (!scores.includes(0)) {
+        mailLink = document.getElementById('contact__mail-button');
         mailLink.innerHTML = "<a href='mailto:" + link + betreff + '&body=' + body + "'>Nimm Kontakt auf</a>";
-    }
+    //}
 }

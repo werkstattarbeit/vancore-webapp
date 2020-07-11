@@ -264,7 +264,60 @@ body {
     word-wrap: break-word;
 }
 
+/***********************************/
+/***                             ***/
+/***       Contact Content       ***/
+/***                             ***/
+/***********************************/
 
+
+.contact__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 60vh;
+}
+
+.contact__message {
+    order: 1;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+.contact__message-img {
+    background-color: orange;
+}
+
+.contact__message-text {
+    background-color: coral;
+}
+
+.contact__score {
+    order: 2;
+    background-color: cadetblue;
+    text-align: center;
+    font-family: 'GT Walsheim Bold';
+    line-height: 30pt;
+    font-size: 20pt;
+}
+
+.contact__mail {
+    order: 3;
+    background-color: darkslateblue;
+    text-align: center;
+}
+
+#contact__mail-button {
+    background-color: cadetblue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 8px 16px;
+}
 
 
 
@@ -406,4 +459,28 @@ body {
         line-height: 1.1em;
         grid-gap: 1%;
     }
+
+    /***********************************/
+    /***                             ***/
+    /***       Contact Content       ***/
+    /***                             ***/
+    /***********************************/
+
+
+    .contact__content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__message {
+        order: 2;
+    }
+
+    .contact__score {
+        order: 1;
+    }
+
+    .contact__mail {
+        order: 3;
+    }
+
 }
