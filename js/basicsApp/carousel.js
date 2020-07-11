@@ -63,6 +63,7 @@ const goLeft = () => {
     updateDots(currentDot, prevDot);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
     updatePagenumber(prevIndex);
+    setContactPageStyle(prevIndex);
 };
 // click left
 prevButton.addEventListener('click', e => {
@@ -83,6 +84,7 @@ const goRight = () => {
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
     updatePagenumber(nextIndex);
+    setContactPageStyle(nextIndex);
 }
 // click right
 nextButton.addEventListener('click', e => {
@@ -106,6 +108,7 @@ dotsNav.addEventListener('click', e => {
     moveToSlide(track, currentSlide, targetSlide);
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
+    setContactPageStyle(targetIndex);
 });
 
 
@@ -130,11 +133,12 @@ $('input:radio').on('click', function(e) {
     // Update final score
     let currentScore = calculateChanges()
     const finalScore = document.getElementById('final-score');
-    if (scores.includes(0)) {
-        finalScore.innerHTML= "Ihr score konnte noch nicht berechnet werden. Bitte beantworte Frage" + getAllIndexes(scores, 0);
-    } else {
+    const errorMessage = document.getElementById('error-message');
+    //if (scores.includes(0)) {
+        errorMessage.innerHTML= "Ihr score konnte noch nicht berechnet werden. Bitte beantworte Frage" + getAllIndexes(scores, 0);
+    //} else {
         finalScore.innerHTML= currentScore;
-    }
+    //}
 
 });
 
@@ -229,8 +233,42 @@ const updateProgressbar = () => {
             dots[i].classList.add('carousel__indicator-checked');
         }
     }
-}
+};
 
+
+/************************/
+/*                      */
+/*       Contact        */
+/*                      */
+/************************/
+
+const setContactPageStyle = (currentIndex) => {
+    const trackConatiner    = document.querySelector(".carousel__track-container"); // overflow: visible
+    const basicsNav         = document.querySelector(".carousel__basics-nav"); // display: nonee
+    const navContent        = document.querySelector(".carousel__nav-content"); // display: none
+    const carousel          = document.querySelector(".carousel");
+    const arrowLeft          = document.querySelector("#arrow-left");
+
+    if(currentIndex === slides.length - 1) {
+        console.log(currentIndex, ":\t last page reached.");
+        carousel.style.background = "#1A2247";
+        navContent.style.background = "#1A2247";
+        //basicsNav.style.background= "#1A2247";
+        //trackConatiner.style.overflow = "visible";
+        //navContent.style.display = "none";
+
+        arrowLeft.src="img/arrow-left-white.svg"
+    }
+    else {
+        console.log(currentIndex, ":\t not last page");
+        carousel.style.background = "#E1F0FF";
+        navContent.style.background = "#E1F0FF";
+        //basicsNav.style.background= "#E1F0FF";
+        //trackConatiner.style.overflow = "hidden";
+        //basicsNav.style.display = "grid";
+        arrowLeft.src="img/arrow-left.svg"
+    }
+};
 
 /************************/
 /*                      */

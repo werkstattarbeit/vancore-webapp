@@ -9,17 +9,18 @@ body {
 
 .carousel {
     position: relative;
-    height: 45vh;
+    height: 75vh;
     width: 80%;
     top: 100px;
     margin: 0 auto;
     background: #E1F0FF;
+    transition: ease-in-out 0.2s;
 }
 
 
 .carousel__track-container {
     background: #E1F0FF;
-    height: 100%;
+    height: 55vh;
     position: relative;
     overflow: hidden;
 }
@@ -42,9 +43,11 @@ body {
 
 .carousel__nav-content {
     display: grid;
+    height: 10vh;
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-areas: "button-left dots button-right";
     background: #E1F0FF;
+    transition: ease-in-out 0.2s;
 }
 
 .carousel__button {
@@ -72,6 +75,7 @@ body {
     height: 14px;
     grid-area: dots;
     display: grid;
+    margin: 2.5vh 0;
     grid-template-columns: repeat(25, 14px);
     grid-gap: 1.5%;
     justify-content: center;
@@ -136,8 +140,7 @@ body {
     "basics-terms";
     margin: 0 auto;
     width: 80%;
-    height: 150px;
-    padding-top: 20px;
+    height: 10vh;
 }
 
 
@@ -195,8 +198,8 @@ body {
 .slide__content {
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    height: 60vh;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
 }
 
 .slide__question {
@@ -275,48 +278,88 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 60vh;
+    grid-template-rows: 27.5vh 27.5vh;
+    grid-template-areas:    "message score mail"
+                            "img score mail";
+    height: 55vh;
+    width: 100%;
 }
 
 .contact__message {
-    order: 1;
+    grid-area: message;
     position: relative;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: cornflowerblue;
     text-align: center;
+    background-color: #E1F0FF;
 }
 
-.contact__message-img {
-    background-color: orange;
+.contact__message h2 {
+    align-self: end;
+    font-size: 2.8em;
+    line-height: 0.9em;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.contact__message-text {
-    background-color: coral;
+.contact__message p {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    align-self: center;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact__img {
+    grid-area: img;
+}
+
+.contact__img img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
 }
 
 .contact__score {
-    order: 2;
-    background-color: cadetblue;
+    grid-area: score;
+    background-color: #ffffff;
     text-align: center;
     font-family: 'GT Walsheim Bold';
     line-height: 30pt;
     font-size: 20pt;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.contact__score p {
+    align-self: center;
+    padding-top: 20%;
+}
+
+#final-score {
+    align-self: center;
+    font-size: 3.5em;
+    border-bottom: 5px solid;
+}
+
+#error-message {
+    display: none;
 }
 
 .contact__mail {
-    order: 3;
-    background-color: darkslateblue;
+    grid-area: mail;
+    background-color: #5e7aff;
     text-align: center;
 }
 
 #contact__mail-button {
-    background-color: cadetblue;
     border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    border: none;
-    padding: 8px 16px;
+    color: #1A2247;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 

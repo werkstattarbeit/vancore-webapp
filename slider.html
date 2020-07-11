@@ -543,19 +543,29 @@
 
             <!--       Kontakt      -->
 
-
             <li class="carousel__slide">
                 <div class="contact__content">
                     <div class="contact__message">
-                        <div class="contact__message-img"></div>
-                        <div class="contact__message-text">This is a great result. Good job!</div>
+                        <h2>Unsere Meinung:</h2>
+                        <p class="contact__result-message">1 Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  2</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  3</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  4</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  5</p>
+                    </div>
+                    <div class="contact__img">
+                        <img src="img/placeholder.png">
                     </div>
                     <div class="contact__score">
-                        <div class="contact__score"><span id="final-score">0</span></div>
+                        <p>Ihr Score:</p>
+                        <div class="contact__result">
+                            <span id="final-score">0</span>
+                            <span id="error-message" class="is-hidden">0</span>
+                        </div>
                     </div>
                     <div class="contact__mail">
-                        <p>Mail</p>
-                        <button id="contact__mail-button"></button>
+                        <p>Für mehr Meinung, nehmen sie jetzt Kontakt auf</p>
+                        <div id="contact__mail-button"></div>
                     </div>
                 </div>
             </li>
@@ -565,7 +575,7 @@
 
     <div class="carousel__nav-content">
         <button class="carousel__button carousel__button--left is-hidden">
-            <img src="img/arrow-left.svg">
+            <img id="arrow-left" src="img/arrow-left.svg">
         </button>
         <div class="carousel__indicator-pagenumber">
             <p>Seite <span id="carousel__indicator-pagenumber">1</span> von 25</p>
@@ -605,7 +615,7 @@
         </div>
 
         <button class="carousel__button carousel__button--right">
-            <img src="img/arrow-right.svg">
+            <img id="arrow-right" src="img/arrow-right.svg">
         </button>
     </div>
 
