@@ -466,7 +466,7 @@ body {
     }
 
     .carousel__basics {
-        margin: 0 auto;
+        margin: 0 auto 20px;
         align-self: end;
         height: 8vh;
     }
@@ -515,50 +515,55 @@ body {
 
 
     .contact__content {
-        height: 100%;
+        height: 70vh;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 25vh 35vh 20vh;
+        grid-template-rows: 25vh 30vh 15vh;
         grid-template-areas: "score message"
                             "img img"
                             "mail mail";
     }
 
     .contact__message {
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: 8vh 17vh;
         background: #ffffff;
         height: 100%;
+        padding-left: 2vw;
     }
 
     .contact__message h2 {
-        font-size: 3vh;
+        font-size: 1.4em;
+        width: 90%;
         margin: 0;
         float: left;
-        width: 90%;
+        align-self: center;
     }
 
     .contact__message p {
-        font-size: 1.5vh;
-        line-height: 2vh;
+        font-size: 1em;
+        line-height: 1em;
         margin: 0;
         float: left;
         width: 90%;
     }
 
     .contact__score {
-        grid-template-rows: 1fr 3fr;
+        grid-template-rows: 8vh 17vh;
         background: #ffffff;
         height: 100%;
     }
 
     .contact__score p {
+        font-size: 1.4em;
+        line-height: 1em;
         padding: 0;
+        margin: 0;
     }
 
     #final-score {
         margin: 0 auto;
-        padding-bottom: 2vh;
         align-self: center;
         font-size: 8vh;
+        line-height: 1em;
         width: auto;
     }
 
@@ -581,7 +586,7 @@ body {
 @media only screen and (max-width: 500px) {
 
     .carousel__basics {
-        margin: 0 auto;
+        margin: 0 auto 20px;
         align-self: end;
         height: 60%;
     }
@@ -606,7 +611,7 @@ body {
 @media only screen and (max-width: 400px) {
 
     .carousel__basics {
-        margin: 0 auto;
+        margin: 0 auto 20px;
         align-self: end;
         height: 40%;
     }
@@ -617,4 +622,43 @@ body {
         line-height: 1.1em;
         font-size: 1.5em;
     }
+}
+
+@media only screen and (max-height: 568px) {
+    .carousel__basics-nav {
+        height: 25vh;
+    }
+
+    .carousel__track-container {
+        height: 60vh;
+    }
+
+
+    .carousel__nav-content {
+        height: 15vh;
+        grid-template-rows: 5vh 10vh;
+    }
+
+    .carousel__indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    /*    contact    */
+
+    .contact__content {
+        height: 60vh;
+        grid-template-rows: 30vh 30vh;
+        grid-template-areas: "score message"
+                             "mail mail";
+    }
+
+    .contact__img {
+        display: none;
+    }
+
+    .contact__message p {
+        font-size: 1.2em;
+    }
+
 }
