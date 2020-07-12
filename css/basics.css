@@ -324,23 +324,28 @@ body {
 .contact__score {
     grid-area: score;
     background-color: #ffffff;
-    text-align: center;
+
     font-family: 'GT Walsheim Bold';
-    line-height: 30pt;
-    font-size: 20pt;
     display: grid;
     grid-template-rows: 1fr 1fr;
 
 }
 
 .contact__score p {
+    font-size: 2em;
+    line-height: 2em;
+    text-align: center;
     align-self: center;
     padding-top: 20%;
 }
 
 #final-score {
-    align-self: center;
-    font-size: 3.5em;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    align-self: start;
+    font-size: 10em;
+    line-height:1em;
     border-bottom: 5px solid;
 }
 
@@ -508,7 +513,7 @@ body {
     .contact__content {
         height: 100%;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 0.5fr 1fr 1fr;
+        grid-template-rows: 25vh 35vh 20vh;
         grid-template-areas: "score message"
                             "img img"
                             "mail mail";
@@ -520,9 +525,19 @@ body {
         height: 100%;
     }
 
+    .contact__message h2 {
+        font-size: 3vh;
+        margin: 0;
+        float: left;
+        width: 90%;
+    }
+
     .contact__message p {
         font-size: 1.5vh;
         line-height: 2vh;
+        margin: 0;
+        float: left;
+        width: 90%;
     }
 
     .contact__score {
@@ -531,12 +546,16 @@ body {
         height: 100%;
     }
 
-    .contact__result {
+    .contact__score p {
+        padding: 0;
     }
 
     #final-score {
-        position: relative;
-        font-size: 5vh;
+        margin: 0 auto;
+        padding-bottom: 2vh;
+        align-self: center;
+        font-size: 8vh;
+        width: auto;
     }
 
     .contact__mail {
