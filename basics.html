@@ -9,6 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="favicon.png" />
 
+    <!-- BASICS TOOL SCRIPTS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
 
     <!--JQUERY-->
 
@@ -79,24 +84,614 @@
 
 </header>
 
-<div id="form">
+
+<div class="carousel">
+
+    <div class="carousel__basics-nav">
+        <div class="carousel__basics carousel__basics-white"> <!--cp letter grid for blue and hide non-current letters -->
+            <img src="img/white-b.svg" alt="basics-letter" class="carousel__basics-letter carousel__white-letter">
+            <img src="img/white-a.svg" alt="basics-letter" class="carousel__basics-letter carousel__white-letter">
+            <img src="img/white-s.svg" alt="basics-letter" class="carousel__basics-letter carousel__white-letter">
+            <img src="img/white-i.svg" alt="basics-letter" class="carousel__basics-letter carousel__white-letter">
+            <img src="img/white-c.svg" alt="basics-letter" class="carousel__basics-letter carousel__white-letter">
+            <img src="img/white-s.svg" alt="basics-letter" class="carousel__basics-letter carousel__white-letter">
+        </div>
+        <div class="carousel__basics carousel__basics-blue"> <!--cp letter grid for blue and hide non-current letters -->
+            <img src="img/blue-b.svg" alt="basics-letter" class="carousel__basics-letter carousel__blue-letter current-letter">
+            <img src="img/blue-a.svg" alt="basics-letter" class="carousel__basics-letter carousel__blue-letter hidden-letter">
+            <img src="img/blue-s.svg" alt="basics-letter" class="carousel__basics-letter carousel__blue-letter hidden-letter">
+            <img src="img/blue-i.svg" alt="basics-letter" class="carousel__basics-letter carousel__blue-letter hidden-letter">
+            <img src="img/blue-c.svg" alt="basics-letter" class="carousel__basics-letter carousel__blue-letter hidden-letter">
+            <img src="img/blue-s.svg" alt="basics-letter" class="carousel__basics-letter carousel__blue-letter hidden-letter">
+        </div>
+        <div class="basics__term">
+            <p class="basics__term-text current-text">Baseline</p>
+            <p class="basics__term-text hidden-text">Assumptions</p>
+            <p class="basics__term-text hidden-text">Strategy</p>
+            <p class="basics__term-text hidden-text">Implications</p>
+            <p class="basics__term-text hidden-text">Commitment</p>
+            <p class="basics__term-text hidden-text">Sustainability</p>
+        </div>
+    </div>
+
+    <div class="carousel__track-container">
+        <ul class="carousel__track">
+
+            <!--       BASELINE        -->
+
+
+            <li class="carousel__slide current-slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Liegt eine Analyse der Stärken und Schwächen der Vergangenheit vor?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Haben wir die wesentlichen Treiber und Beeinflusser integriert? Käufer, Entscheider, Nutzer, Unterstützer, Feinde, Kritiker</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Sind die Rahmenparameter Zeit, Kosten und Ergebnis fixiert sowie strategische No-Gos definiert?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+                    Übergangsfolie Baseline
+                </div>
+            </li>
+
+
+            <!--       ASSUMPTION        -->
+
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Kennen wir die für uns wichtigen externen Trends?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Liegt eine Wettbewerbs- und Kunden-/Marktanalyse vor?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Gibt es Szenarien für unsere bestehenden Märkte?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+                    Übergangsfolie Assumptions
+                </div>
+            </li>
+
+
+            <!--       Strategy        -->
+
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Existiert ein Leitbild, im Führungsteam erstellt und gesamthaft in der Strategie kaskadiert?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Existiert ein Zielsystem? Sind Ziele und Performancesystem miteinander verknüpft? Haben wir multidemensionale Ziele?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Kennen wir die Kernkompetenzen und die Differenzierungsmerkmale zum Wettbewerb?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+                    Übergangsfolie Strategy
+                </div>
+            </li>
+
+
+
+            <!--       Implications        -->
+
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Wurden die notwendigen Fähigkeiten definiert und nach Soll und Ist bewertet?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Sind die notwendigen Fähigkeiten relativ zueinander bewertet und priorisiert?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Kennen wir die kritischen Themen, die die Umsetzung der Strategie gefährden können, und ggf. Lösungsszenarien?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+                    Übergangsfolie Implications
+                </div>
+            </li>
+
+
+            <!--       Commitment        -->
+
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">WSind die Stakeholder benannt worden?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Gibt es eine Kommunikationsplanung?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Kennen wir die Herausforderungen für die existierende Unternehmenskultur, die mit der strategischen Entscheidung einhergehen?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+                    Übergangsfolie Commitment
+                </div>
+            </li>
+
+
+            <!--       Sustainability        -->
+
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Wurden Lösungen für Strategiecontrolling und Strategie Review definiert?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Existiert ein übergreifendes Projekt- Management (PMO)?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="carousel__slide">
+                <div class="slide__content">
+
+                    <div class="slide__question">
+                        <p class="slide__question-text">Ist sichergestellt, dass Veränderungen im Umfeld aufgenommen und verarbeitet werden?</p>
+                    </div>
+                    <div class="slide__choices">
+                        <form class="slide__choices-buttons">
+                            <input class="slide__choices-radio choice" type="radio" value="1" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="2" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="3" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="4" name="radios"/>
+                            <input class="slide__choices-radio choice" type="radio" value="5" name="radios"/>
+                        </form>
+                        <div class="slide__choices-subtext">
+                            <p>gar nicht</p>
+                            <p>rudi&shy;mentär</p>
+                            <p>teils teils</p>
+                            <p>mehr&shy;heit&shy;lich</p>
+                            <p>voll umfäng&shy;lich</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="carousel__slide">
+                <div class="slide__content">
+                    Übergangsfolie Sustainability
+                </div>
+            </li>
+
+
+            <!--       Kontakt      -->
+
+            <li class="carousel__slide">
+                <div class="contact__content">
+                    <div class="contact__message">
+                        <h2>Unsere Meinung:</h2>
+                        <p class="contact__result-message">1 Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  2</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  3</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  4</p>
+                        <p class="contact__result-message is-hidden">Das war toll! Weiter so!  5</p>
+                    </div>
+                    <div class="contact__img">
+                        <img src="img/placeholder.png">
+                    </div>
+                    <div class="contact__score">
+                        <p>Ihr Score:</p>
+                        <span id="final-score">0</span>
+                    </div>
+                    <div class="contact__mail">
+                        <p>Für mehr Meinung, nehmen sie jetzt Kontakt auf</p>
+                        <div id="contact__mail-button"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="carousel__nav-content">
+        <button class="carousel__button carousel__button--left is-hidden">
+            <img id="arrow-left" src="img/arrow-left.svg">
+        </button>
+        <div class="carousel__indicator-pagenumber">
+            <p>Seite <span id="carousel__indicator-pagenumber">1</span> von 25</p>
+        </div>
+        <div class="carousel__nav">
+            <button class="carousel__indicator current-slide checked-slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
+
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
+
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
+
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
+
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
+
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator carousel__breaker fas fa-comments"></button>
+
+            <button class="carousel__indicator carousel__breaker fas fa-flag-checkered"></button>
+        </div>
+
+        <button class="carousel__button carousel__button--right">
+            <img id="arrow-right" src="img/arrow-right.svg">
+        </button>
+    </div>
 
 </div>
 
-
-
-    <!-- FOOTER -->
-    <footer class="light">
-        <!--
-
-        <div class="col two"><img class="referenz" src="links/audi.svg" /></div>
-        <div class="col two"><img class="referenz" src="links/porsche.svg" /></div>
-        <div class="col two"><img class="referenz" src="links/bmw_dark.png" /></div>
-        <div class="col two"><img class="referenz" src="links/igel.svg" /></div>
-        <div class="col two"><img class="referenz" src="links/sap.svg" /></div>
-        <div class="col two"><img class="referenz" src="links/otto.svg" /></div>-->
-        <div class="col twelve"><a href="impressum.html"><p class="copy_s">Impressum</p></a></div>
-    </footer>
 
     <!--MENU-->
     <script type="text/javascript" src="js/jquery.flexnav.min.js"></script>
@@ -123,6 +718,9 @@
         }
     </script>
 
+    <!-- BASICS TOOL FUNCTIONS-->
+    <script src="js/basicsApp/carousel.js"></script>
+    <script src="js/basicsApp/mail.js"></script>
 
 </body>
 

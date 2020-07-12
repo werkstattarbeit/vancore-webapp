@@ -134,7 +134,7 @@ body {
 .carousel__basics-nav {
     position: relative;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 8vh 2vh;
     grid-template-areas:    "basics-letter"
     "basics-terms";
     margin: 0 auto;
@@ -147,14 +147,28 @@ body {
     display: grid;
     grid-area: basics-letters;
     grid-template-columns: repeat(6, 1fr);
-    align-self: center;
     width: 100%;
-    height: 60px;
+    height: 8vh;
 }
 
+.carousel__basics-letter {
+    height: 60%;
+    margin: 0 auto;
+    align-self: end;
+}
+
+.carousel__basics-blue {
+    position: absolute;
+}
+
+
+.carousel__basics-white {
+    position: absolute;
+}
 .basics__term {
     grid-area: basics-terms;
     display: grid;
+    align-self: start;
     grid-template-columns: repeat(6, 1fr);
 }
 
@@ -162,10 +176,6 @@ body {
     margin: 0 auto;
     font-size: 14pt;
     color: #ACC0FF;
-}
-
-.carousel__basics-blue {
-    position: absolute;
 }
 
 .hidden-letter {
@@ -176,14 +186,7 @@ body {
     opacity: 0;
 }
 
-.carousel__basics-white {
-    position: absolute;
-}
 
-.carousel__basics-letter {
-    height: 80%;
-    margin: 0 auto;
-}
 
 
 
