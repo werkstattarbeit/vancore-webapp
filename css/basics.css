@@ -396,7 +396,7 @@ body {
     }
 
     .carousel__track-container {
-        height: 80vh;
+        height: 70vh;
     }
 
     .carousel__indicator-pagenumber {
@@ -460,6 +460,7 @@ body {
     .carousel__basics-nav {
         position: relative;
         width: 90vw;
+        height: 20vh;
         padding-top: 0;
         grid-template-rows: 1fr;
     }
