@@ -243,30 +243,24 @@ const updateProgressbar = () => {
 /************************/
 
 const setContactPageStyle = (currentIndex) => {
-    const trackConatiner    = document.querySelector(".carousel__track-container"); // overflow: visible
-    const basicsNav         = document.querySelector(".carousel__basics-nav"); // display: nonee
     const navContent        = document.querySelector(".carousel__nav-content"); // display: none
     const carousel          = document.querySelector(".carousel");
-    const arrowLeft          = document.querySelector("#arrow-left");
+    const arrowLeft         = document.querySelector("#arrow-left");
+    const pageNumber        = document.querySelector(".carousel__indicator-pagenumber");
 
     if(currentIndex === slides.length - 1) {
         console.log(currentIndex, ":\t last page reached.");
         carousel.style.background = "#1A2247";
         navContent.style.background = "#1A2247";
-        //basicsNav.style.background= "#1A2247";
-        //trackConatiner.style.overflow = "visible";
-        //navContent.style.display = "none";
-
         arrowLeft.src="img/arrow-left-white.svg"
+        pageNumber.style.color = "#ffffff"
     }
     else {
         console.log(currentIndex, ":\t not last page");
         carousel.style.background = "#E1F0FF";
         navContent.style.background = "#E1F0FF";
-        //basicsNav.style.background= "#E1F0FF";
-        //trackConatiner.style.overflow = "hidden";
-        //basicsNav.style.display = "grid";
         arrowLeft.src="img/arrow-left.svg"
+        pageNumber.style.color = "#5e7aff"
     }
 };
 

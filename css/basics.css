@@ -51,7 +51,6 @@ body {
 }
 
 .carousel__button {
-    top: 100%;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -380,14 +379,16 @@ body {
 /***********************************/
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) and (orientation: portrait){
     .carousel {
         height: 100vh;
         width: 100vw;
         top: 0;
         overflow: hidden;
-        display: grid;
-        grid-template-rows: 1fr 6fr 1fr;
+    }
+
+    .carousel__track-container {
+        height: 80vh;
     }
 
     .carousel__indicator-pagenumber {
@@ -400,11 +401,12 @@ body {
 
     .carousel__nav-content {
         width: 90%;
+        height: 10vh;
         margin: 0 auto;
         position: relative;
         display: grid;
         grid-template-columns: 1fr 6fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 5vh 5vh;
         grid-template-areas: "dots dots dots"
         "button-left pagenumber button-right";
     }
@@ -421,35 +423,139 @@ body {
     .carousel__indicator {
         width: 15px;
         height: 15px;
-        pointer-events: none;
+        /*pointer-events: none; TODO: reactivate*/
     }
 
     .carousel__indicator-pagenumber {
-        font-size: 3em;
-        height: 2em;
+        font-size: 3vh;
+        height: 2vh;
         margin: 0 auto;
         bottom: 1.6em;
         color: #5e7aff;
     }
 
-    .carousel__button img{
-        width: 100%;
-        margin: 0 auto;
+    .carousel__button {
+        height: 100%;
+        padding-bottom: 20%;
     }
 
-    /***********************************/
-    /***                             ***/
+    .carousel__button img{
+        height: 100%;
+        width: auto;
+        max-width: 80%;
+    }
+
+
     /***           BASICS            ***/
-    /***                             ***/
-    /***********************************/
+
 
     .carousel__basics-nav {
         position: relative;
-        width: 80%;
+        width: 90vw;
         padding-top: 0;
-        height: 200px;
         grid-template-rows: 1fr;
     }
+
+    .carousel__basics {
+        margin: 0 auto;
+        align-self: end;
+        height: 8vh;
+    }
+
+    .basics__term {
+        display: none;
+    }
+
+
+    /***       Slide Content         ***/
+
+
+    .slide__content {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .slide__question-text {
+        position: relative;
+        width: 90%;
+        line-height: 4.0vh;
+        font-size: 3.8vh;
+    }
+
+    .slide__choices {
+        width: 95%;
+        margin: 0 auto;
+        grid-template-rows: 1fr 1fr;
+        align-self: start;
+    }
+
+    .slide__choices-radio {
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .slide__choices-subtext {
+        font-size: 2vh;
+        hyphens: manual;
+        word-wrap: break-word;
+        line-height: 1.1em;
+        grid-gap: 1%;
+    }
+
+
+    /***       Contact Content       ***/
+
+
+    .contact__content {
+        height: 100%;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 0.5fr 1fr 1fr;
+        grid-template-areas: "score message"
+                            "img img"
+                            "mail mail";
+    }
+
+    .contact__message {
+        grid-template-rows: 1fr 3fr;
+        background: #ffffff;
+        height: 100%;
+    }
+
+    .contact__message p {
+        font-size: 1.5vh;
+        line-height: 2vh;
+    }
+
+    .contact__score {
+        grid-template-rows: 1fr 3fr;
+        background: #ffffff;
+        height: 100%;
+    }
+
+    .contact__result {
+    }
+
+    #final-score {
+        position: relative;
+        font-size: 5vh;
+    }
+
+    .contact__mail {
+        height: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .carousel__indicator {
+        width: 10px;
+        height: 10px;
+        pointer-events: none;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
 
     .carousel__basics {
         margin: 0 auto;
@@ -457,73 +563,35 @@ body {
         height: 60%;
     }
 
-    .basics__term {
-        display: none;
-    }
-
-    /***********************************/
-    /***                             ***/
-    /***       Slide Content         ***/
-    /***                             ***/
-    /***********************************/
-
-    .slide__content {
-        grid-template-rows: 3fr 1fr;
-    }
-
     .slide__question-text {
         position: relative;
         width: 90%;
         line-height: 1.1em;
-        font-size: 2.5em;
-    }
-
-
-    .slide__choices {
-        width: 95%;
-        margin: 0 auto;
-        grid-template-rows: 1fr 1fr;
-
-
-    }
-
-    .slide__choices-radio {
-        height: 30px;
-        width: 30px;
-        border: 1em solid white;
-        border-radius: 100%;
-        cursor: pointer;
+        font-size: 2.0em;
     }
 
     .slide__choices-subtext {
-        font-size: 2.6em;
+        font-size: 1.0em;
         hyphens: manual;
         word-wrap: break-word;
         line-height: 1.1em;
         grid-gap: 1%;
     }
 
-    /***********************************/
-    /***                             ***/
-    /***       Contact Content       ***/
-    /***                             ***/
-    /***********************************/
+}
 
+@media only screen and (max-width: 400px) {
 
-    .contact__content {
-        grid-template-columns: 1fr;
+    .carousel__basics {
+        margin: 0 auto;
+        align-self: end;
+        height: 40%;
     }
 
-    .contact__message {
-        order: 2;
+    .slide__question-text {
+        position: relative;
+        width: 90%;
+        line-height: 1.1em;
+        font-size: 1.5em;
     }
-
-    .contact__score {
-        order: 1;
-    }
-
-    .contact__mail {
-        order: 3;
-    }
-
 }
