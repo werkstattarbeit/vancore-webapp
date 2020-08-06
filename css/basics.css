@@ -269,6 +269,57 @@ body {
     word-wrap: break-word;
 }
 
+
+/***********************************/
+/***                             ***/
+/***     Transition Slides       ***/
+/***                             ***/
+/***********************************/
+
+.transition-slide {
+    display: grid;
+    grid-template-rows: 27.5vh 27.5vh;
+}
+
+.transition-slide__reinhard {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "reinhard-image reinhard-message";
+}
+
+.transition-slide__martin {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "martin-message martin-image";
+}
+
+.reinhard-message {
+    grid-area: reinhard-message;
+    height: 100%;
+    width: 100%;
+}
+
+.reinhard-image {
+    grid-area: reinhard-image;
+}
+
+.martin-message {
+    grid-area: martin-message;
+    height: 100%;
+    width: 100%;
+}
+
+.margin-image {
+    grid-area: martin-image;
+}
+
+.transition-slide__image img {
+    width: 100%;
+}
+
+
 /***********************************/
 /***                             ***/
 /***       Contact Content       ***/
@@ -621,6 +672,13 @@ body {
         width: 90%;
         line-height: 1.1em;
         font-size: 1.5em;
+    }
+}
+
+
+@media only screen and (max-height: 736px) {
+    .carousel__basics {
+        height: 40%;
     }
 }
 
