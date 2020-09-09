@@ -724,6 +724,7 @@ strong {
 /*BASICS-INFO*/
 
 #basics {
+    height: 76vh;
     position: relative;
     padding-top: 80px;
 }
@@ -737,6 +738,7 @@ strong {
 }
 
 .basics-info-box {
+    padding-top: 20%;
     display: grid;
     grid-template-areas: "basics-info-text"
                          "basics-info-line"
