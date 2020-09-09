@@ -120,7 +120,7 @@ dotsNav.addEventListener('click', e => {
 /************************/
 
 // Represents all inputs from every slide
-var scores = [0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null];
+var scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
 
 $('input:radio').on('click', function(e) {
     let inputRadioClicked = $(e.currentTarget);
@@ -154,7 +154,7 @@ function calculateChanges() {
 
 // Find all 0s to display which question still needs to be answered
 function getAllIndexes(arr, val) {
-    var indexes = [], i = -1;
+    let indexes = [], i = -1;
     while ((i = arr.indexOf(val, i+1)) != -1){
         indexes.push(i+1);
     }

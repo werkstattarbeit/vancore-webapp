@@ -641,11 +641,17 @@ strong {
     }*/
 
 
-#wirbieten {
+#wirbieten{
     font-size: 1.8rem;
     margin: 0;
     padding: 25px 0 25px 0;
     border-top: 2px solid white;
+}
+
+#wasbringen{
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0 0 25px 0;
 }
 
 .detail_list {
@@ -724,13 +730,17 @@ strong {
 /*BASICS-INFO*/
 
 #basics {
-    height: 76vh;
+    margin: 0 auto;
+}
+
+#basics {
+    height: auto;
     position: relative;
     padding-top: 80px;
 }
 
 .basics-info-wrapper {
-    padding-top: 20px;
+    padding-top: 40px;
 	display: grid;
     grid-template-areas: "basics-left basics-right";
     grid-gap: 10%;
@@ -738,7 +748,6 @@ strong {
 }
 
 .basics-info-box {
-    padding-top: 20%;
     display: grid;
     grid-template-areas: "basics-info-text"
                          "basics-info-line"
@@ -946,7 +955,11 @@ footer {
         margin: 0;
     }
 
-    #wirbieten {
+    #wirbieten{
+        padding: 25px 0 0px 25px;
+    }
+
+    #wasbringen{
         padding: 25px 0 0px 25px;
     }
 }
@@ -1034,6 +1047,10 @@ footer {
 
 
     #wirbieten {
+        font-size: 1.5rem;
+    }
+
+    #wasbringen {
         font-size: 1.5rem;
     }
 
