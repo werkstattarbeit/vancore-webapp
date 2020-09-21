@@ -7,6 +7,87 @@ body {
     background: #1A2247;
 }
 
+.basics__landing {
+    position: absolute;
+    height: 75vh;
+    top: 100px;
+    width: 80%;
+    left: 10%;
+    background-color: #e1f0ff;
+    z-index: 99;
+}
+
+.basics__landing-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:    "landing-text1"
+                            "landing-text2"
+                            "landing-button";
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 8%;
+}
+
+.basics__landing-content p {
+    font-family: 'GT Walsheim Regular';
+    line-height: 30pt;
+    font-size: 20pt;
+}
+
+.basics__landing-content a {
+    font-family: 'GT Walsheim Regular';
+    line-height: 30pt;
+    font-size: 20pt;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+
+    display: block;
+    padding: 10px;
+    background-color: #5e7aff;
+    font-weight: 700;
+}
+
+.basics__landing-content a:hover {
+    background-color: #ACC0FF;
+    cursor: pointer;
+}
+
+#basics__landing-text1 {
+    grid-area: landing-text1;
+}
+
+#basics__landing-text2 {
+    grid-area: landing-text2;
+}
+
+#basics__landing-button {
+    grid-area: landing-button;
+    align-self: center;
+}
+
+.basics__landing-info {
+    right: 11%;
+    top: 120px;
+    position: absolute;
+    z-index: 98;
+    background-color: rgba(0,0,0,0);
+    color: #ACC0FF;
+    border: none;
+
+}
+
+.basics__landing-info:focus {
+    outline: none;
+}
+
+.basics__landing-info:hover {
+    color: #5e7aff;
+    cursor: pointer;
+}
+
 .carousel {
     position: relative;
     height: 75vh;
@@ -19,7 +100,7 @@ body {
 
 
 .carousel__track-container {
-    background: #E1F0FF;
+    background: #e1f0ff;
     height: 55vh;
     position: relative;
     overflow: hidden;

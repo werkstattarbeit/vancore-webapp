@@ -285,3 +285,15 @@ hammertime.on("swiperight", function(ev) {
 });
 
 
+
+
+const basicsLanding = document.querySelector('.basics__landing');
+const basicsLandingButton = document.getElementById('basics__landing-button');
+basicsLandingButton.addEventListener('click', e => {
+    basicsLanding.classList.add('is-hidden');
+});
+const basicsLandingInfo = document.getElementById('basics__landing-info');
+basicsLandingInfo.addEventListener('click', e => {
+    basicsLanding.classList.remove('is-hidden');
+});
+

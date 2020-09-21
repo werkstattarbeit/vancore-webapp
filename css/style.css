@@ -729,6 +729,14 @@ strong {
 
 /*BASICS-INFO*/
 
+#basics-new {
+    background-color: white;
+    color: #1A2247;
+    font-size: 9pt;
+    padding: 2px;
+    border-radius: 2px;
+}
+
 #basics {
     margin: 0 auto;
 }
