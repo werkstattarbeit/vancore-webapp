@@ -582,6 +582,102 @@ body {
 
 
 @media only screen and (max-width: 1000px) and (orientation: portrait){
+
+    /*** Landing ***/
+
+    .basics__landing {
+        width: 100vw;
+        height: 90vh;
+        top: 10vh;
+        left: 0;
+    }
+
+    .basics__landing-content {
+        margin-top: 20px;
+    }
+
+    .basics__landing-content p {
+        line-height: 22pt;
+        font-size: 16pt;
+    }
+
+    .basics__landing-content a {
+        font-size: 16pt;
+        padding: 5px;
+        width: 150px;
+    }
+
+    #basics__landing-button {
+        margin-top: 40px;
+        align-self: end;
+    }
+
+    #basics__landing-info {
+        top: revert;
+        bottom: 10px;
+        right: 43%;
+        font-size: 2em;
+    }
+
+    /*** Transition Slides ***/
+
+
+    .transition-slide {
+        padding: 20px;
+    }
+
+    .transition-slide__reinhard {
+        grid-template-columns: 15% 85%;
+    }
+
+    .transition-slide__martin {
+        grid-template-columns: 85% 15%;
+    }
+
+    .transition-slide__image img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .reinhard-image {
+        padding-left: 10px;
+        padding-bottom: 100px;
+        z-index: 80;
+    }
+
+    .martin-image {
+        padding-right: 10px;
+        padding-bottom: 100px;
+    }
+
+    .reinhard-message {
+        width: 100%;
+        font-size: 9pt;
+        line-height: 14pt;
+        text-align: left;
+    }
+
+    .speech-bubble-left {
+        padding-left: 40px;
+    }
+
+    .martin-message {
+        width: 100%;
+        font-size: 9pt;
+        line-height: 14pt;
+        text-align: left;
+    }
+
+    .speech-bubble-right:after {
+        opacity: 0;
+    }
+
+    .speech-bubble-left:after {
+        opacity: 0;
+    }
+
+        /*** Carousel ***/
+
     .carousel {
         height: 100vh;
         width: 100vw;
@@ -626,7 +722,12 @@ body {
     .carousel__indicator {
         width: 15px;
         height: 15px;
-        /*pointer-events: none; TODO: reactivate*/
+        overflow: revert;
+        /*pointer-events: none; TODO: reactivate - WHAT HAPPENED HERE?*/
+    }
+
+    .fa, .far, .fas {
+        font-size: 0.8em;
     }
 
     .carousel__indicator-pagenumber {
@@ -768,6 +869,7 @@ body {
 
 }
 
+
 @media only screen and (max-width: 600px) {
 
     .carousel__indicator {
@@ -821,12 +923,117 @@ body {
 
 
 @media only screen and (max-height: 736px) {
+    .basics__landing-content {
+        grid-template-rows: 3fr 3fr 1fr;
+        height: 90%;
+        padding-top: 10px;
+    }
+
+    .basics__landing-content p {
+        font-size: 12pt;
+        line-height: 18pt;
+    }
+
+    .basics__landing-content a {
+        font-size: 12pt;
+        padding: 0;
+    }
+
+    #basics__landing-button {
+        margin: 0;
+    }
+
+    /*** Transition Slide ***/
+
+    .transition-slide p {
+        line-height: revert;
+    }
+
+    .transition-slide__image img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .speech-bubble-left {
+        padding-left: 25px;
+        height: 80%;
+    }
+
+    .speech-bubble-right {
+        height: 80%;
+    }
+
+    .reinhard-image {
+        padding-bottom: 70px;
+    }
+
+    .martin-image {
+        padding-bottom: 70px;
+    }
+
+    .reinhard-message {
+        font-size: 9pt;
+        line-height: 20pt;
+    }
+
+    .martin-message {
+        font-size: 9pt;
+        line-height: 20pt;
+    }
+
+
+    /*** Carousel ***/
+
     .carousel__basics {
         height: 40%;
     }
 }
 
-@media only screen and (max-height: 568px) {
+@media only screen and (max-height: 640px) {
+
+    /*** Transition Slide ***/
+
+    .transition-slide {
+        padding: 10px;
+        align-content: start;
+        grid-template-rows: auto auto;
+    }
+
+    .transition-slide__image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .speech-bubble-left {
+        padding-left: 25px;
+        height: 90%;
+    }
+
+    .speech-bubble-right {
+        height: 90%;
+    }
+
+    .reinhard-image {
+        padding-bottom: 70px;
+    }
+
+    .martin-image {
+        padding-bottom: 70px;
+    }
+
+    .reinhard-message {
+        font-size: 7pt;
+        line-height: 14pt;
+    }
+
+    .martin-message {
+        font-size: 7pt;
+        line-height: 14pt;
+    }
+
+    /*** Carousel ***/
+
+
     .carousel__basics-nav {
         height: 25vh;
     }
@@ -844,6 +1051,10 @@ body {
     .carousel__indicator {
         width: 8px;
         height: 8px;
+    }
+
+    .fa, .far, .fas {
+        font-size: 0.6em;
     }
 
     /*    contact    */
