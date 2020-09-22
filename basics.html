@@ -105,7 +105,7 @@
             </p>
         </div>
         <div id="basics__landing-button">
-            <a>Zum online Tool</a>
+            <a id="basics__landing-button-text">Los geht's!</a>
         </div>
     </div>
 </div>
@@ -754,11 +754,19 @@
                         <img src="img/placeholder.png">
                     </div>
                     <div class="contact__score">
-                        <p>Ihr Score:</p>
-                        <span id="final-score">0</span>
+                        <p id="error-message"></p>
+                        <div id="your-score">
+                            <p>Ihr Score:</p>
+                            <p id="final-score">0</p>
+                        </div>
                     </div>
                     <div class="contact__mail">
-                        <p>Für mehr Meinung, nehmen sie jetzt Kontakt auf</p>
+                        <h2>Für mehr Meinung, nehmen sie jetzt Kontakt auf!</h2>
+                        <ul id="contact__base-info">
+                            <li><strong>Melden Sie sich bei uns!</strong></li>
+                            <li>Tel.: 1234-567890</li>
+                            <li>Mail: info@vancore.io</li>
+                        </ul>
                         <div id="contact__mail-button"></div>
                     </div>
                 </div>
@@ -805,7 +813,7 @@
             <button class="carousel__indicator"></button>
             <button class="carousel__indicator"></button>
 
-            <button class="carousel__indicator carousel__breaker fas fa-flag-checkered"></button>
+            <button id="carousel__last-indicator" class="carousel__indicator carousel__breaker fas fa-flag-checkered"></button>
         </div>
 
         <button class="carousel__button carousel__button--right">

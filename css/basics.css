@@ -48,6 +48,7 @@ body {
     padding: 10px;
     background-color: #5e7aff;
     font-weight: 700;
+    color: #E1F0FF;
 }
 
 .basics__landing-content a:hover {
@@ -498,8 +499,8 @@ body {
 }
 
 .contact__message h2 {
-    align-self: end;
-    font-size: 2.8em;
+    align-self: center;
+    font-size: 2.2em;
     line-height: 0.9em;
     text-align: left;
     width: 80%;
@@ -530,9 +531,16 @@ body {
     background-color: #ffffff;
 
     font-family: 'GT Walsheim Bold';
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+}
 
+
+#your-score {
+    width: 100%;
+}
+
+#error-message {
+    font-size: 1.6em;
+    line-height: 1.2em;
 }
 
 .contact__score p {
@@ -540,38 +548,82 @@ body {
     line-height: 2em;
     text-align: center;
     align-self: center;
-    padding-top: 20%;
+    padding-top: 40%;
 }
 
-#final-score {
-    width: 30%;
+
+#final-score{
     margin: 0 auto;
+    width: 30%;
     text-align: center;
-    align-self: start;
     font-size: 10em;
     line-height:1em;
     border-bottom: 5px solid;
+    padding: 0;
 }
 
-#error-message {
-    display: none;
-}
 
 .contact__mail {
     grid-area: mail;
     background-color: #5e7aff;
+    text-align: left;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.contact__mail h2 {
+    align-self: center;
+    font-size: 2.2em;
+    line-height: 1.0em;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    color: #E1F0FF;
+}
+
+
+.contact__mail p {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    color: #ffffff;
+    padding-right: 40px;
+    padding-left: 40px;
+    align-self: center;
+}
+
+
+#contact__mail-button a {
+    display: inline-block;
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-family: 'GT Walsheim Regular';
+    line-height: 18pt;
+    font-size: 16pt;
     text-align: center;
+    text-decoration: none;
+    padding: 12px 0;
+    background-color: #0000A0;
+    color: #E1F0FF;
+    font-weight: 600;
 }
 
-#contact__mail-button {
-    border-radius: 5px;
-    color: #1A2247;
-    text-decoration: underline;
+#contact__mail-button a:hover {
     cursor: pointer;
+    background-color: #1A2247;
 }
 
-
-
+#contact__base-info {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.4em;
+    line-height: 1.6em;
+    list-style: none;
+    color: #ffffff;
+    align-self: center;
+}
 
 
 
@@ -724,7 +776,6 @@ body {
         width: 15px;
         height: 15px;
         overflow: revert;
-        /*pointer-events: none; TODO: reactivate - WHAT HAPPENED HERE?*/
     }
 
     .fa, .far, .fas {

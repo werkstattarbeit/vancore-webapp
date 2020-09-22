@@ -122,6 +122,12 @@ dotsNav.addEventListener('click', e => {
 // Represents all inputs from every slide
 var scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
 
+$("#carousel__last-indicator").on('click', function(e) {
+
+    updateFinalScore();
+
+});
+
 $('input:radio').on('click', function(e) {
     let inputRadioClicked = $(e.currentTarget);
     const currentSlide = track.querySelector('.current-slide');
@@ -130,20 +136,33 @@ $('input:radio').on('click', function(e) {
     updateProgressbar()
     updateMail()
 
-    // Update final score
-    let currentScore = calculateChanges()
-    const finalScore = document.getElementById('final-score');
-    const errorMessage = document.getElementById('error-message');
-    //if (scores.includes(0)) {
-        errorMessage.innerHTML= "Ihr score konnte noch nicht berechnet werden. Bitte beantworte Frage" + getAllIndexes(scores, 0);
-    //} else {
-        finalScore.innerHTML= currentScore;
-    //}
+    updateFinalScore()
 
 });
 
+function updateFinalScore() {
+    // Update final score
+    let currentScore = calculateChanges()
+
+    const yourScore = document.getElementById('your-score');
+    const finalScore = document.getElementById('final-score');
+    const errorMessage = document.getElementById('error-message');
+
+    if (scores.includes(0)) {
+        errorMessage.innerHTML= "Bitte beantworten Sie alle Fragen.";
+
+        yourScore.classList.add("is-hidden");
+        errorMessage.classList.remove("is-hidden");
+    } else {
+        finalScore.innerHTML= currentScore;
+
+        yourScore.classList.remove("is-hidden");
+        errorMessage.classList.add("is-hidden");
+    }
+}
+
 function calculateChanges() {
-    let sum = 0
+    let sum = 0;
     scores.forEach(val => {
         if (val != null) {
             sum += parseInt(val)
@@ -285,15 +304,25 @@ hammertime.on("swiperight", function(ev) {
 });
 
 
-
+/************************/
+/*                      */
+/*       Landing        */
+/*                      */
+/************************/
 
 const basicsLanding = document.querySelector('.basics__landing');
 const basicsLandingButton = document.getElementById('basics__landing-button');
+
 basicsLandingButton.addEventListener('click', e => {
     basicsLanding.classList.add('is-hidden');
 });
+
+
+const basicsButtonText = document.getElementById("basics__landing-button-text");
 const basicsLandingInfo = document.getElementById('basics__landing-info');
+
 basicsLandingInfo.addEventListener('click', e => {
+    basicsButtonText.innerHTML = "Weiter geht's!";
     basicsLanding.classList.remove('is-hidden');
 });
 
