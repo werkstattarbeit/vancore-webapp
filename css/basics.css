@@ -170,7 +170,7 @@ body {
     outline: none;
     cursor: pointer;
     border-style: none;
-    color: white;
+    color: #5e7aff;
     background-color: #ACC0FF;
     border-radius: 100%;
     overflow: hidden;
@@ -179,7 +179,7 @@ body {
 }
 
 .carousel__indicator-checked {
-    background-color: rgb(75, 250, 195);
+    background-color: #0000A0;
 }
 
 .carousel__indicator-pagenumber {
@@ -406,7 +406,7 @@ body {
 
 .transition-slide p {
     font-size: 1.6em;
-    line-height: 1em;
+    line-height: 1.4em;
 }
 
 .speech-bubble-right {
@@ -418,6 +418,7 @@ body {
     /*border: solid 4px #5e7aff;*/
     /*box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .1), 0 0.0625rem 0.125rem rgba(0, 0, 0, .1);*/
 }
+
 
 .speech-bubble-right:after {
     content: '';
