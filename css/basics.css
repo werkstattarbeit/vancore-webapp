@@ -753,6 +753,9 @@ body {
         width: 100vw;
         top: 0;
         overflow: hidden;
+
+        height: calc(var(--vh, 1vh)* 100); /*Height with custom CSS Property scaling content to the actual height.*/
+
     }
 
     .carousel__track-container {
