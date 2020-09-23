@@ -9,7 +9,7 @@ const prepareScoreForMail = () => {
 }
 
 const updateMail = () => {
-    coded = "QTNYWGc@UGW-iv1E1G.71"
+    coded = "xxxxxxx@xx-xxxx.xx"
     key = "wMcmK6grF7LXRCN5t3WnA2J0Eu8QvkspVOBey9bIGqfolZUzSYdTP4Ha1hxijD"
     shift=coded.length
     link=""
