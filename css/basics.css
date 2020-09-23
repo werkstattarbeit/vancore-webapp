@@ -783,6 +783,9 @@ body {
         grid-template-rows: 5vh 5vh;
         grid-template-areas: "dots dots dots"
         "button-left pagenumber button-right";
+
+        height: calc(var(--vh, 1vh)* 10); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 5);
     }
 
     .carousel__nav {
@@ -872,12 +875,11 @@ body {
         align-self: start;
     }
 
-    .slide__choices-radio {
+    /* Seems not necessary */
+    /*.slide__choices-radio {
         height: 5vh;
         width: 5vh;
-
-        height: calc(var(--vh, 1vh)* 5); /*Height with custom CSS Property scaling content to the actual height.*/
-    }
+    }*/
 
     .slide__choices-subtext {
         font-size: 2vh;
