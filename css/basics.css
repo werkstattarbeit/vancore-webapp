@@ -1166,6 +1166,39 @@ body {
         font-size: 1.5em;
     }
 
+
+    /*** Carousel ***/
+    .carousel__basics-nav {
+        height: 25vh;
+
+        height: calc(var(--vh, 1vh)* 25); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
+    .carousel__track-container {
+        height: 60vh;
+
+        height: calc(var(--vh, 1vh)* 60); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
+
+    .carousel__nav-content {
+        height: 15vh;
+        grid-template-rows: 5vh 10vh;
+
+        height: calc(var(--vh, 1vh)* 15); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 10);
+    }
+
+    .carousel__indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .fa, .far, .fas {
+        font-size: 0.6em;
+    }
+
+
     /*** Transition Slide ***/
 
     .transition-slide {
@@ -1206,33 +1239,10 @@ body {
         line-height: 14pt;
     }
 
-    /*** Carousel ***/
 
 
-    .carousel__basics-nav {
-        height: 25vh;
-    }
+    /***    contact    ***/
 
-    .carousel__track-container {
-        height: 60vh;
-    }
-
-
-    .carousel__nav-content {
-        height: 15vh;
-        grid-template-rows: 5vh 10vh;
-    }
-
-    .carousel__indicator {
-        width: 8px;
-        height: 8px;
-    }
-
-    .fa, .far, .fas {
-        font-size: 0.6em;
-    }
-
-    /*    contact    */
 
     .contact__content {
         height: 60vh;
