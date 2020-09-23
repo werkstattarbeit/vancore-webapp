@@ -1,3 +1,11 @@
+/*FONT*/
+@font-face {
+    font-family: 'GT Walsheim Bold';
+    src: url('../font/gt-walsheim-bold-webfont.ttf') format('truetype');
+    font-family: 'GT Walsheim Light';
+    src: url('../font/gt-walsheim-regular-webfont.ttf') format('truetype');
+}
+
 /***********************************/
 /***                             ***/
 /***          Carousel           ***/
@@ -30,13 +38,11 @@ body {
 }
 
 .basics__landing-content p {
-    font-family: 'GT Walsheim Regular';
     line-height: 30pt;
     font-size: 20pt;
 }
 
 .basics__landing-content a {
-    font-family: 'GT Walsheim Regular';
     line-height: 30pt;
     font-size: 20pt;
     width: 200px;
@@ -290,6 +296,8 @@ body {
     height: 30%;
     width: 100%;
     align-self: center;
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+    font-weight: 800;
 }
 
 .slide__question-text {
@@ -297,7 +305,6 @@ body {
     width: 67%;
     margin: 0 auto;
     text-align: center;
-    font-family: 'GT Walsheim Bold';
     line-height: 30pt;
     font-size: 28pt;
 }
@@ -599,7 +606,6 @@ body {
     width: 40%;
     margin-top: 10%;
     margin-left: 10%;
-    font-family: 'GT Walsheim Regular';
     line-height: 18pt;
     font-size: 16pt;
     text-align: center;
