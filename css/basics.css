@@ -548,13 +548,14 @@ body {
     line-height: 2em;
     text-align: center;
     align-self: center;
-    padding-top: 40%;
+    padding-top: 30%;
 }
 
 
 #final-score{
     margin: 0 auto;
-    width: 30%;
+    min-width: 30%;
+    max-width: 66%;
     text-align: center;
     font-size: 10em;
     line-height:1em;
@@ -721,6 +722,14 @@ body {
         text-align: left;
     }
 
+    .speech-bubble-left {
+        height: auto;
+    }
+
+    .speech-bubble-right {
+        height: auto;
+    }
+
     .speech-bubble-right:after {
         opacity: 0;
     }
@@ -776,6 +785,7 @@ body {
         width: 15px;
         height: 15px;
         overflow: revert;
+        pointer-events: none;
     }
 
     .fa, .far, .fas {
@@ -864,59 +874,118 @@ body {
 
     .contact__content {
         height: 70vh;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 25vh 30vh 15vh;
-        grid-template-areas: "score message"
-                            "img img"
+        width: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 30vh 25vh;
+        grid-template-areas: "score score"
+                            "message message"
                             "mail mail";
+    }
+
+    .contact__img {
+        display: none;
     }
 
     .contact__message {
         grid-template-rows: 8vh 17vh;
-        background: #ffffff;
         height: 100%;
-        padding-left: 2vw;
+        width: 90vw;
+        margin: 0;
+        padding-left: 5vw;
     }
 
     .contact__message h2 {
+        width: 100%;
         font-size: 1.4em;
-        width: 90%;
-        margin: 0;
-        float: left;
-        align-self: center;
+        text-align: center;
     }
 
     .contact__message p {
-        font-size: 1em;
-        line-height: 1em;
-        margin: 0;
-        float: left;
-        width: 90%;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        text-align: center;
     }
 
     .contact__score {
-        grid-template-rows: 8vh 17vh;
         background: #ffffff;
         height: 100%;
+        width: 100vh;
     }
 
-    .contact__score p {
+    #error-message {
+        width: 100vw;
         font-size: 1.4em;
         line-height: 1em;
-        padding: 0;
-        margin: 0;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #your-score {
+        width: 100vw;
+    }
+
+    #your-score-text {
+        width: 50vw;
+        position: relative;
+        float: left;
+        text-align: center;
+        font-size: 1.4em;
+        line-height: 1em;
+        padding-top: 30px;
     }
 
     #final-score {
-        margin: 0 auto;
-        align-self: center;
+        position: relative;
+        float: right;
+        text-align: center;
+        padding-top: 20px;
+        margin-right: 10vw;
+        min-width: 30vw;
+        max-width: 48vw;
         font-size: 8vh;
         line-height: 1em;
-        width: auto;
     }
 
     .contact__mail {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas: "contact-mail-title contact-mail-title"
+                            "contact-base-info contact-mail-button"
+                            "contact-base-info contact-mail-button";
         height: 100%;
+        width: 100vw;
+    }
+
+    .contact__mail h2 {
+        grid-area: contact-mail-title;
+        width: 90vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        text-align: left;
+        font-size: 1.4em;
+        padding-top: 1.4em;
+    }
+
+    #contact__base-info {
+        grid-area: contact-base-info;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        margin: 0;
+        padding-left: 5vw
+    }
+
+    #contact__mail-button {
+        grid-area: contact-mail-button;
+        padding-top: 1.4em;
+        align-content: center;
+        align-self: center;
+        align-items: center;
+    }
+
+    #contact__mail-button a {
+        width: 80%;
+        margin: 0 auto;
     }
 
 }
@@ -1113,7 +1182,7 @@ body {
 
     .contact__content {
         height: 60vh;
-        grid-template-rows: 30vh 30vh;
+        grid-template-rows: 20vh 40vh;
         grid-template-areas: "score message"
                              "mail mail";
     }

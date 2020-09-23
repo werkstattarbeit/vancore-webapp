@@ -7,6 +7,10 @@ const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
+// Initialise and update score once
+let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
+updateFinalScore()
+
 // arrange slides next  to another
 const setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + 'px';
@@ -119,9 +123,6 @@ dotsNav.addEventListener('click', e => {
 /*                      */
 /************************/
 
-// Represents all inputs from every slide
-var scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
-
 $("#carousel__last-indicator").on('click', function(e) {
 
     updateFinalScore();
@@ -141,6 +142,7 @@ $('input:radio').on('click', function(e) {
 });
 
 function updateFinalScore() {
+    console.log("Update Score")
     // Update final score
     let currentScore = calculateChanges()
 
