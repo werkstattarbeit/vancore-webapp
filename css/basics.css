@@ -859,6 +859,7 @@ body {
 
     .slide__content {
         grid-template-rows: 1fr 1fr;
+        height: calc(var(--vh, 1vh)* 60);
     }
 
     .slide__question-text {
