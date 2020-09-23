@@ -858,7 +858,9 @@ body {
 
 
     .slide__content {
+        height: 60vh;
         grid-template-rows: 1fr 1fr;
+
         height: calc(var(--vh, 1vh)* 60);
     }
 
