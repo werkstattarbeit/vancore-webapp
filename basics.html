@@ -837,8 +837,6 @@
         }
     );</script>
 
-
-
     <!--SKROLLR-->
     <script type="text/javascript" src="js/skrollr.min.js"></script>
     <script type="text/javascript">
@@ -853,8 +851,18 @@
     <script src="js/basicsApp/carousel.js"></script>
     <script src="js/basicsApp/mail.js"></script>
 
-    <script type="text/javascript">
 
+    <!-- CUSTOM CSS TYPE --vh -->
+    <script type="text/javascript">
+        console.log("scaling content height");
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+        window.addEventListener('resize', () => {
+            console.log("re-scaling content height");
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
     </script>
 
 </body>
