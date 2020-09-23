@@ -760,6 +760,8 @@ body {
 
     .carousel__track-container {
         height: 70vh;
+        height: calc(var(--vh, 1vh)* 70); /*Height with custom CSS Property scaling content to the actual height.*/
+
     }
 
     .carousel__indicator-pagenumber {
@@ -832,12 +834,16 @@ body {
         height: 20vh;
         padding-top: 0;
         grid-template-rows: 1fr;
+        height: calc(var(--vh, 1vh)* 20); /*Height with custom CSS Property scaling content to the actual height.*/
+
     }
 
     .carousel__basics {
         margin: 0 auto 20px;
         align-self: end;
         height: 8vh;
+        height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
+
     }
 
     .basics__term {
@@ -869,6 +875,8 @@ body {
     .slide__choices-radio {
         height: 5vh;
         width: 5vh;
+
+        height: calc(var(--vh, 1vh)* 5); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
     .slide__choices-subtext {
@@ -885,12 +893,15 @@ body {
 
     .contact__content {
         height: 70vh;
-        width: 100vh;
+        width: 100vw;
         grid-template-columns: 1fr;
         grid-template-rows: 15vh 30vh 25vh;
         grid-template-areas: "score score"
                             "message message"
                             "mail mail";
+
+        height: calc(var(--vh, 1vh)* 70); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 15) calc(var(--vh, 1vh)* 30) calc(var(--vh, 1vh)* 25); /*Grid-Rows with custom CSS Property scaling content to the actual height.*/
     }
 
     .contact__img {
@@ -900,9 +911,10 @@ body {
     .contact__message {
         grid-template-rows: 8vh 17vh;
         height: 100%;
-        width: 90vw;
+        width: 100vw;
         margin: 0;
-        padding-left: 5vw;
+
+        grid-template-rows: calc(var(--vh, 1vh)* 8) calc(var(--vh, 1vh)* 17); /*Grid-Rows with custom CSS Property scaling content to the actual height.*/
     }
 
     .contact__message h2 {
@@ -920,7 +932,7 @@ body {
     .contact__score {
         background: #ffffff;
         height: 100%;
-        width: 100vh;
+        width: 100vw;
     }
 
     #error-message {
