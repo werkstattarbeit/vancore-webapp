@@ -651,7 +651,7 @@ body {
         top: 10vh;
         left: 0;
 
-        height: calc(var(--vh, 1vh)* 90); /*Height with custom CSS Property scaling content to the actual height.*/
+        height: calc(var(--vh, 1vh)* 100); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
     .basics__landing-content {
