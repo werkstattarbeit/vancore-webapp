@@ -676,9 +676,9 @@ body {
 
     #basics__landing-info {
         top: revert;
-        bottom: 10px;
-        right: 43%;
-        font-size: 2em;
+        bottom: 10%;
+        font-size: 3em;
+        left: 5vw;
     }
 
     /*** Transition Slides ***/
@@ -1045,8 +1045,8 @@ body {
     .slide__question-text {
         position: relative;
         width: 90%;
-        line-height: 1.1em;
-        font-size: 1.5em;
+        line-height: 1.3em;
+        font-size: 1.8em;
     }
 }
 
@@ -1119,6 +1119,20 @@ body {
 }
 
 @media only screen and (max-height: 640px) {
+
+    #basics__landing-info {
+        top: revert;
+        bottom: 15%;
+        font-size: 2em;
+        left: 5vw;
+    }
+
+    .slide__question-text {
+        position: relative;
+        width: 90%;
+        line-height: 1.1em;
+        font-size: 1.5em;
+    }
 
     /*** Transition Slide ***/
 
