@@ -647,8 +647,8 @@ body {
 
     .basics__landing {
         width: 100vw;
-        height: 90vh;
-        top: 10vh;
+        height: 90%;/**TODO: online changed**/
+        top: 10%;/**TODO: online changed**/
         left: 0;
     }
 
@@ -747,7 +747,7 @@ body {
         /*** Carousel ***/
 
     .carousel {
-        height: 100vh;
+        height: 100%;/**TODO: online changed**/
         width: 100vw;
         top: 0;
         overflow: hidden;
@@ -768,12 +768,12 @@ body {
 
     .carousel__nav-content {
         width: 90%;
-        height: 10vh;
+        height: 10%;/**TODO: online changed**/
         margin: 0 auto;
         position: relative;
         display: grid;
         grid-template-columns: 1fr 6fr 1fr;
-        grid-template-rows: 5vh 5vh;
+        grid-template-rows: 5% 5%;/**TODO: online changed**/
         grid-template-areas: "dots dots dots"
         "button-left pagenumber button-right";
     }
@@ -824,7 +824,7 @@ body {
     .carousel__basics-nav {
         position: relative;
         width: 90vw;
-        height: 20vh;
+        height: 20%;/**TODO: online changed**/
         padding-top: 0;
         grid-template-rows: 1fr;
     }
@@ -832,7 +832,7 @@ body {
     .carousel__basics {
         margin: 0 auto 20px;
         align-self: end;
-        height: 8vh;
+        height: 8%;/**TODO: online changed**/
     }
 
     .basics__term {
@@ -879,10 +879,10 @@ body {
 
 
     .contact__content {
-        height: 70vh;
+        height: 70%;/**TODO: online changed**/
         width: 100vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 15vh 30vh 25vh;
+        grid-template-rows: 15% 30% 25%;/**TODO: online changed**/
         grid-template-areas: "score score"
                             "message message"
                             "mail mail";
