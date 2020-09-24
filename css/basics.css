@@ -675,7 +675,7 @@ body {
     }
 
     #basics__landing-info {
-        top: revert;
+        top: unset;
         width: 20%;
         bottom: 15px;
         right: 50%;
