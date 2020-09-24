@@ -678,8 +678,9 @@ body {
         top: revert;
         width: 10%;
         bottom: 10px;
-        left: 45%;
-        right: revert;
+        right: 25%;
+        left: 50%;
+        margin-left: -5%;
     }
 
     /*** Carousel ***/
