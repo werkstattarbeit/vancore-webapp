@@ -676,10 +676,10 @@ body {
 
     #basics__landing-info {
         top: revert;
-        width: 10vw;
+        width: 10%;
         bottom: 10px;
-        left: 45vw;
-        right: 45vw;
+        left: 45%;
+        right: 45%;
     }
 
     /*** Carousel ***/
@@ -810,6 +810,12 @@ body {
         height: calc(var(--vh, 1vh)* 60);
     }
 
+    .slide__question {
+        height: revert;
+        width: 100%;
+        align-self: end;
+    }
+
     .slide__question-text {
         position: relative;
         width: 90%;
@@ -821,7 +827,7 @@ body {
         width: 95%;
         margin: 0 auto;
         grid-template-rows: 1fr 1fr;
-        align-self: start;
+        align-self: center;
     }
 
     /* Seems not necessary */
