@@ -76,7 +76,6 @@ body {
 }
 
 .basics__landing-info {
-    right: 11%;
     top: 120px;
     position: absolute;
     z-index: 98;
@@ -915,16 +914,16 @@ body {
 
 
     .contact__content {
-        height: 70vh;
+        height: 65vh;
         width: 100vw;
         grid-template-columns: 1fr;
-        grid-template-rows: 15vh 30vh 25vh;
+        grid-template-rows: 15vh 25vh 25vh;
         grid-template-areas: "score score"
                             "message message"
                             "mail mail";
 
-        height: calc(var(--vh, 1vh)* 70); /*Height with custom CSS Property scaling content to the actual height.*/
-        grid-template-rows: calc(var(--vh, 1vh)* 15) calc(var(--vh, 1vh)* 30) calc(var(--vh, 1vh)* 25); /*Grid-Rows with custom CSS Property scaling content to the actual height.*/
+        height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 15) calc(var(--vh, 1vh)* 25) calc(var(--vh, 1vh)* 25); /*Grid-Rows with custom CSS Property scaling content to the actual height.*/
     }
 
     .contact__img {
