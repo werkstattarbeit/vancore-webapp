@@ -76,6 +76,7 @@ body {
 }
 
 .basics__landing-info {
+    right: 11%;
     top: 120px;
     position: absolute;
     z-index: 98;
@@ -690,7 +691,7 @@ body {
         width: 100vw;
         top: 0;
         overflow: hidden;
-        grid-template-rows: 25vh 65vh 10vh;
+        grid-template-rows: 25vh 60vh 10vh;
         grid-template-areas: "basics-nav"
                             "track-container"
                             "nav-content";
@@ -702,7 +703,7 @@ body {
 
     .carousel__track-container {
         grid-area: track-container;
-        height: 60vh;
+        height: 65vh;
         height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
 
     }
@@ -728,7 +729,7 @@ body {
         grid-template-areas: "dots dots dots"
         "button-left pagenumber button-right";
 
-        height: calc(var(--vh, 1vh)* 5); /*Height with custom CSS Property scaling content to the actual height.*/
+        height: calc(var(--vh, 1vh)* 15); /*Height with custom CSS Property scaling content to the actual height.*/
         grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 10);
     }
 
@@ -1178,9 +1179,9 @@ body {
     }
 
     .carousel__track-container {
-        height: 60vh;
+        height: 65vh;
 
-        height: calc(var(--vh, 1vh)* 60); /*Height with custom CSS Property scaling content to the actual height.*/
+        height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
 
