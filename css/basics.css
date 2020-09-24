@@ -720,17 +720,17 @@ body {
     .carousel__nav-content {
         grid-area: nav-content;
         width: 90%;
-        height: 10vh;
+        height: 15vh;
         margin: 0 auto;
         position: relative;
         display: grid;
-        grid-template-columns: 1fr 6fr 1fr;
-        grid-template-rows: 5vh 5vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 5vh 10vh;
         grid-template-areas: "dots dots dots"
         "button-left pagenumber button-right";
 
         height: calc(var(--vh, 1vh)* 5); /*Height with custom CSS Property scaling content to the actual height.*/
-        grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 5);
+        grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 10);
     }
 
     .carousel__nav {
@@ -765,13 +765,12 @@ body {
 
     .carousel__button {
         height: 100%;
-        width: 30%;
-        margin-top: 20%;
     }
 
     .carousel__button img{
         height: 100%;
     }
+
 
 
     /***           BASICS            ***/
@@ -1189,6 +1188,7 @@ body {
     .carousel__nav-content {
         height: 15vh;
         grid-template-rows: 5vh 10vh;
+        grid-template-columns: 1fr 2fr 1fr;
 
         height: calc(var(--vh, 1vh)* 15); /*Height with custom CSS Property scaling content to the actual height.*/
         grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 10);
