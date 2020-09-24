@@ -693,6 +693,7 @@ body {
         width: 100vw;
         top: 0;
         overflow: hidden;
+        background-color: #E1F0FF;
         grid-template-rows: 25vh 60vh 10vh;
         grid-template-areas: "basics-nav"
                             "track-container"
