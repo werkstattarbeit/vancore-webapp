@@ -682,6 +682,7 @@ body {
         left: 50%;
         margin-left: -5%;
         margin-right: 5%;
+        text-align: center;
     }
 
     /*** Carousel ***/
@@ -813,7 +814,6 @@ body {
     .slide__question {
         height: revert;
         width: 100%;
-        align-self: end;
     }
 
     .slide__question-text {
