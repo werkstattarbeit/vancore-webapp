@@ -676,10 +676,10 @@ body {
 
     #basics__landing-info {
         top: revert;
-        bottom: 10%;
-        font-size: 3em;
-        left: 5vw;
-        display: none
+        width: 10vw;
+        bottom: 10px;
+        left: 45vw;
+        right: 45vw;
     }
 
     /*** Carousel ***/
@@ -1153,11 +1153,9 @@ body {
 @media only screen and (max-height: 640px) {
 
     #basics__landing-info {
-        top: revert;
-        bottom: 15%;
-        font-size: 2em;
-        left: 5vw;
+        font-size: 2.5em;
     }
+
 
     .slide__question-text {
         position: relative;
