@@ -676,18 +676,21 @@ body {
 
     #basics__landing-info {
         top: revert;
-        width: 10%;
-        bottom: 20px;
+        width: 20%;
+        bottom: 15px;
         right: 50%;
         left: 50%;
         padding: 0;
-        margin-left: -5%;
-        margin-right: 5%;
+        margin-left: -10%;
+        margin-right: 10%;
         text-align: center;
+    }
+
+    #basics__landing-info img {
         overflow: visible;
     }
 
-    /*** Carousel ***/
+        /*** Carousel ***/
     body {
         background: #E1F0FF;
     }
