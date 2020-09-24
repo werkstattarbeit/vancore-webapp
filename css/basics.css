@@ -1186,12 +1186,12 @@ body {
 
 
     .carousel__nav-content {
-        height: 15vh;
-        grid-template-rows: 5vh 10vh;
+        height: 10vh;
+        grid-template-rows: 3vh 7vh;
         grid-template-columns: 1fr 2fr 1fr;
 
-        height: calc(var(--vh, 1vh)* 15); /*Height with custom CSS Property scaling content to the actual height.*/
-        grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 10);
+        height: calc(var(--vh, 1vh)* 10); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 3) calc(var(--vh, 1vh)* 7);
     }
 
     .carousel__indicator {
