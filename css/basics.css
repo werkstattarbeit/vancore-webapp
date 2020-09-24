@@ -1179,9 +1179,9 @@ body {
     }
 
     .carousel__track-container {
-        height: 65vh;
+        height: 60vh;
 
-        height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
+        height: calc(var(--vh, 1vh)* 60); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
 
@@ -1202,7 +1202,7 @@ body {
 
     .carousel__button {
         height: 80%;
-        width: 100%%;
+        width: 100%;
         margin-top: 10%;
     }
 
