@@ -1281,3 +1281,21 @@ body {
     }
 
 }
+
+/*** iPad Pro 11 ***/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+
+    .basics__landing-content {
+        grid-template-rows: 40% 40% 20%;
+    }
+
+    .basics__landing-content p {
+        font-size: 1.4em;
+        line-height: 1.4em;
+    }
+
+    #basics__landing-button {
+        align-self: start;
+    }
+}
