@@ -1296,7 +1296,7 @@ body {
     }
 
     #basics__landing-button {
-
+        background-color: yellow;
         align-self: start;
     }
 }
