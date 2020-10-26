@@ -1285,16 +1285,221 @@ body {
 /*** iPad Pro 11 ***/
 @media only screen and (min-width: 834px) and (max-width: 1194px){
 
+    /*** Landing ***/
+
+    .basics__landing {
+        width: 100vw;
+        height: 90vh; /*Fallback*/
+        top: 10vh;
+        left: 0;
+
+        height: calc(var(--vh, 1vh)* 90); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
     .basics__landing-content {
-        grid-template-rows: 40% 40% 20%;
+        margin-top: 10vh;
     }
 
     .basics__landing-content p {
-        font-size: 1.4em;
-        line-height: 1.6em;
+        line-height: 22pt;
+        font-size: 16pt;
+    }
+
+    .basics__landing-content a {
+        font-size: 16pt;
+        padding: 5px;
+        width: 150px;
     }
 
     #basics__landing-button {
-        align-self: start;
+        align-self: center;
     }
+
+    #basics__landing-info {
+        top: unset;
+        width: 20%;
+        bottom: 15px;
+        right: 50%;
+        left: 50%;
+        padding: 0;
+        margin-left: -10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+
+    #basics__landing-info {
+        bottom: 40px;
+    }
+
+    #basics__landing-info img {
+        overflow: visible;
+    }
+
+    /*** carousel ***/
+
+    .carousel {
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        overflow: hidden;
+        background: #E1F0FF;
+        grid-template-rows: 25vh 60vh 10vh;
+        grid-template-areas: "basics-nav" "track-container" "nav-content";
+
+        height: calc(var(--vh, 1vh) * 100); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh) * 30) calc(var(--vh, 1vh) * 60) calc(var(--vh, 1vh) * 10);
+    }
+
+    .carousel__basics-letter{
+        height: 80%;
+        padding-top: 20px;
+    }
+
+    .carousel__basics-nav {
+        align-items: center;
+    }
+
+    .carousel__track-container {
+        grid-area: track-container;
+        height: 65vh;
+        height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
+    .basics__term-text{
+        padding-top: 8px;
+    }
+
+    .carousel__indicator-pagenumber {
+        opacity: 0; /* Hiding the page number as per customer wish*/
+        position: relative;
+        margin: 0 auto;
+        align-self: center;
+        display: inline-block;
+        grid-area: pagenumber;
+    }
+
+    .carousel__nav-content {
+        grid-area: nav-content;
+        width: 90%;
+        height: 15vh;
+        margin: 0 auto;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 5vh 10vh;
+        grid-template-areas: "dots dots dots"
+        "button-left pagenumber button-right";
+
+        height: calc(var(--vh, 1vh)* 15); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 10);
+    }
+
+    .carousel__nav {
+        grid-area: dots;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-self: end;
+        grid-template-columns: repeat(25, 3%);
+        grid-template-rows: 1fr;
+        grid-gap: 1%;
+    }
+
+    .carousel__indicator {
+        width: 15px;
+        height: 15px;
+        overflow: revert;
+        pointer-events: none;
+    }
+
+
+    .fa, .far, .fas {
+        font-size: 1em;
+    }
+
+    .carousel__indicator-pagenumber {
+        font-size: 3vh;
+        height: 2vh;
+        margin: 0 auto;
+        bottom: 1.6em;
+        color: #5e7aff;
+    }
+
+    .carousel__button {
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .carousel__button img{
+        height: 100%;
+    }
+
+
+    /***           BASICS            ***/
+    .carousel__basics-nav {
+        margin-top: 10vh;
+        grid-area: basic-nav;
+        position: relative;
+        width: 90vw;
+        height: 15vh;
+        padding-top: 0;
+        grid-template-rows: 10vh 5vh;
+        height: calc(var(--vh, 1vh)* 15); /*Height with custom CSS Property scaling content to the actual height.*/
+
+    }
+
+    .carousel__basics {
+        height: 8vh;
+        height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
+    .basics__term {
+        height: 5vh;
+        margin: 0;
+    }
+
+    .carousel__track-container {
+        height: 55vh;
+        height: calc(var(--vh, 1vh)* 55); /*Height with custom CSS Property scaling content to the actual height.*/
+
+    }
+
+    .slide__content {
+        height: 100%;
+    }
+
+    .carousel__nav-content {
+        bottom: 0;
+    }
+
+
+    /*** transition slide ***/
+    .transition-slide {
+        padding: 0 40px;
+    }
+
+    .transition-slide__image img{
+        width: 180px;
+        height: 180px;
+    }
+
+
+    .martin-message p{
+        width: 90%;
+        font-size: 1.6em;
+        line-height: 1.3em;
+    }
+
+    .reinhard-message p{
+        width: 90%;
+        font-size: 1.6em;
+        line-height: 1.3em;
+    }
+
+    /*** question slide ***/
+    .slide__question-text {
+        font-size: 22pt;
+        line-height: 24pt;
+    }
+
 }
