@@ -1291,11 +1291,12 @@ body {
     }
 
     .basics__landing-content p {
-        font-size: 1.4em;
-        line-height: 1.4em;
+        font-size: 1.2em;
+        line-height: 1.2em;
     }
 
     #basics__landing-button {
+
         align-self: start;
     }
 }
