@@ -1283,7 +1283,6 @@ body {
 }
 
 /*** iPad Pro 11 ***/
-
 @media only screen and (min-width: 834px) and (max-width: 1194px){
 
     .basics__landing-content {
@@ -1291,12 +1290,11 @@ body {
     }
 
     .basics__landing-content p {
-        font-size: 1.2em;
-        line-height: 1.2em;
+        font-size: 1.4em;
+        line-height: 1.6em;
     }
 
     #basics__landing-button {
-        background-color: yellow;
         align-self: start;
     }
 }
