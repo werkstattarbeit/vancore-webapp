@@ -1284,7 +1284,7 @@ body {
 
 /*** iPad Pro 11 ***/
 
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 834px) and (max-width: 1194px){
 
     .basics__landing-content {
         grid-template-rows: 40% 40% 20%;
