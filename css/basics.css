@@ -186,7 +186,11 @@ body {
 }
 
 .carousel__indicator-checked {
-    background-color: #0000A0;
+    background-color: #48E5C2;
+}
+
+.carousel__indicator-missed {
+    background-color: #FE938C;
 }
 
 .carousel__indicator-pagenumber {

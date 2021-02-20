@@ -68,6 +68,7 @@ const goLeft = () => {
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
     updatePagenumber(prevIndex);
     setContactPageStyle(prevIndex);
+    updateMissedDots(prevIndex);
 };
 // click left
 prevButton.addEventListener('click', e => {
@@ -89,6 +90,7 @@ const goRight = () => {
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
     updatePagenumber(nextIndex);
     setContactPageStyle(nextIndex);
+    updateMissedDots(nextIndex);
 }
 // click right
 nextButton.addEventListener('click', e => {
@@ -113,9 +115,19 @@ dotsNav.addEventListener('click', e => {
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
     setContactPageStyle(targetIndex);
+    updateMissedDots(targetIndex);
 });
 
-
+const updateMissedDots = (targetIndex) => {
+    console.log("TargetIndex: " + targetIndex);
+    let i;
+    for (i = 0; i < targetIndex+1; i++) {
+        if (scores[i] === 0) {
+            dots[i].classList.add('carousel__indicator-missed');
+            console.log("updating RED");
+        }
+    }
+}
 
 /************************/
 /*                      */
@@ -248,10 +260,12 @@ const updatePagenumber = (targetIndex) => {
 /************************/
 
 const updateProgressbar = () => {
+    console.log("updating progress bar");
     let i;
     for (i = 0; i < scores.length; i++) {
         if (scores[i] != null && scores[i] != 0) {
             dots[i].classList.add('carousel__indicator-checked');
+            dots[i].classList.remove('carousel__indicator-missed');
         }
     }
 };
