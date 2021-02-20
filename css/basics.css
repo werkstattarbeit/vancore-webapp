@@ -232,6 +232,7 @@ body {
 
 
 .carousel__basics {
+    box-sizing: border-box;
     display: grid;
     grid-area: basics-letters;
     grid-template-columns: repeat(6, 1fr);
@@ -240,9 +241,9 @@ body {
 }
 
 .carousel__basics-letter {
-    height: 60%;
+    height: 6vh;
     margin: 0 auto;
-    align-self: end;
+    align-self: center;
 }
 
 .carousel__basics-blue {
@@ -262,8 +263,9 @@ body {
 
 .basics__term-text {
     margin: 0 auto;
-    font-size: 14pt;
+    font-size: 13pt;
     color: #ACC0FF;
+    line-height: normal;
 }
 
 .hidden-letter {
@@ -470,8 +472,8 @@ body {
 
 .transition-slide__image img {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     overflow: hidden;
@@ -804,6 +806,7 @@ body {
         height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
 
     }
+
 
     .basics__term {
         display: none;
@@ -1351,7 +1354,7 @@ body {
     }
 
     .carousel__basics-letter{
-        height: 80%;
+        height: 6vh;
         padding-top: 20px;
     }
 
@@ -1366,7 +1369,7 @@ body {
     }
 
     .basics__term-text{
-        padding-top: 12px;
+        display: none;
     }
 
     .carousel__indicator-pagenumber {
@@ -1452,6 +1455,8 @@ body {
         height: 8vh;
         height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
     }
+
+
 
     .basics__term {
         height: 5vh;
