@@ -168,7 +168,7 @@ function updateFinalScore() {
         yourScore.classList.add("is-hidden");
         errorMessage.classList.remove("is-hidden");
     } else {
-        finalScore.innerHTML= currentScore;
+        finalScore.innerHTML= currentScore+"%";
 
         yourScore.classList.remove("is-hidden");
         errorMessage.classList.add("is-hidden");
@@ -182,7 +182,7 @@ function calculateChanges() {
             sum += parseInt(val)
         }
     });
-    return sum
+    return Math.round((sum/90)*100);
 }
 
 // Find all 0s to display which question still needs to be answered
