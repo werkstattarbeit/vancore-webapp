@@ -9,7 +9,10 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 // Initialise and update score once
 /*let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];*/
-let scores = [null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,1,1,null,1,1,1];
+/*let scores = [null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5];*/
+let scores = [null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,3,];
+/*let scores = [null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,];*/
+/*let scores = [null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,];*/
 updateFinalScore()
 
 // arrange slides next  to another
