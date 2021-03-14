@@ -506,9 +506,10 @@ body {
     grid-area: message;
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 0.5fr 3.5fr;
     text-align: center;
     background-color: #E1F0FF;
+    justify-self: center;
 }
 
 .contact__message h2 {
@@ -520,12 +521,28 @@ body {
     margin: 0 auto;
 }
 
-.contact__message p {
-    font-size: 1.3em;
-    line-height: 1.3em;
+.contact__message h3{
     align-self: center;
+    font-size: 1.6em;
+    line-height: 1.4em;
+    text-align: left;
     width: 80%;
     margin: 0 auto;
+}
+
+#contact__message-wrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2vh;
+    margin: 0 auto;
+    width: 80%;
+    align-self: center;
+}
+
+.contact__message p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    align-self: center;
     text-align: left;
 }
 
@@ -534,7 +551,6 @@ body {
     background-color: #ffffff;
     display: grid;
     grid-template-rows: 1fr 4fr;
-    grid-template-areas: title ;
     font-family:  GT Walsheim Bold, Poppins, sans serif;
     font-weight: 800;
 }
@@ -543,7 +559,7 @@ body {
     align-self: center;
     font-size: 2.2em;
     line-height: 0.9em;
-    text-align: left;
+    text-align: center;
     width: 80%;
     margin: 0 auto;
 }
@@ -567,7 +583,7 @@ body {
     min-width: 30%;
     max-width: 66%;
     text-align: center;
-    font-size: 7em;
+    font-size: 6em;
     line-height:1em;
     padding: 0;
 }
@@ -596,27 +612,36 @@ body {
     text-align: left;
 
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 .contact__mail h2 {
     align-self: center;
     font-size: 2.2em;
-    line-height: 1.0em;
+    line-height: 0.9em;
     text-align: left;
     width: 80%;
     margin: 0 auto;
     color: #E1F0FF;
 }
 
+#contact__mail-wrapper{
+    align-self: center;
+}
+
+#contact__base-info {
+    font-size: 1.3em;
+    line-height: 1.6em;
+    align-self: center;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+    color: #ffffff;
+    padding:0;
+}
 
 .contact__mail p {
-    font-size: 1.6em;
-    line-height: 1.2em;
-    color: #ffffff;
-    padding-right: 40px;
-    padding-left: 40px;
-    align-self: center;
 }
 
 
@@ -640,18 +665,6 @@ body {
     background-color: #1A2247;
 }
 
-#contact__base-info {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
-    font-size: 1.4em;
-    line-height: 1.6em;
-    list-style: none;
-    color: #ffffff;
-    align-self: center;
-}
-
-
 
 /***********************************/
 /***                             ***/
@@ -660,7 +673,7 @@ body {
 /***********************************/
 
 
-@media only screen and (max-width: 1000px) and (orientation: portrait){
+@media only screen and (max-width: 833px) and (orientation: portrait){
 
     /*** Landing ***/
 
@@ -709,7 +722,7 @@ body {
         overflow: visible;
     }
 
-        /*** Carousel ***/
+    /*** Carousel ***/
     body {
         background: #E1F0FF;
     }
@@ -957,18 +970,19 @@ body {
     }
 
     .contact__message {
-        grid-template-rows: 8vh 17vh;
+        display: inline-block;
         height: 100%;
         width: 100vw;
         margin: 0;
-
-        grid-template-rows: calc(var(--vh, 1vh)* 8) calc(var(--vh, 1vh)* 17); /*Grid-Rows with custom CSS Property scaling content to the actual height.*/
     }
 
     .contact__message h2 {
-        width: 100%;
-        font-size: 1.4em;
-        text-align: center;
+        display: none;
+    }
+
+    #contact__message-wrapper {
+        height: 100%;
+        grid-gap: 1vh;
     }
 
     .contact__message p {
@@ -1008,36 +1022,27 @@ body {
     }
 
     .contact__mail {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-areas: "contact-mail-title contact-mail-title"
-                            "contact-base-info contact-mail-button"
-                            "contact-base-info contact-mail-button";
         height: 100%;
         width: 100vw;
     }
 
     .contact__mail h2 {
-        grid-area: contact-mail-title;
         width: 90vw;
         padding-left: 5vw;
         padding-right: 5vw;
-        text-align: left;
+        text-align: center;
         font-size: 1.4em;
         padding-top: 1.4em;
     }
 
     #contact__base-info {
-        grid-area: contact-base-info;
         font-size: 1.2em;
         line-height: 1.4em;
         margin: 0;
-        padding-left: 5vw
+        padding-left: 10vw
     }
 
     #contact__mail-button {
-        grid-area: contact-mail-button;
         padding-top: 1.4em;
         align-content: center;
         align-self: center;
@@ -1046,246 +1051,12 @@ body {
 
     #contact__mail-button a {
         width: 80%;
-        margin: 0 auto;
+        margin-top: 0;
     }
-
-}
-
-
-@media only screen and (max-width: 600px) {
-
-    .carousel__indicator {
-        width: 10px;
-        height: 10px;
-        pointer-events: none;
-    }
-}
-
-
-@media only screen and (max-width: 500px) {
-
-    .carousel__basics {
-        margin: 0 auto 20px;
-        align-self: end;
-        height: 60%;
-    }
-
-    .slide__question-text {
-        position: relative;
-        width: 90%;
-        line-height: 1.1em;
-        font-size: 2.0em;
-    }
-
-    .slide__choices-subtext {
-        font-size: 1.0em;
-        hyphens: manual;
-        word-wrap: break-word;
-        line-height: 1.1em;
-        grid-gap: 1%;
-    }
-
-}
-
-@media only screen and (max-width: 400px) {
-
-    .carousel__basics {
-        margin: 0 auto 20px;
-        align-self: end;
-        height: 40%;
-    }
-
-    .slide__question-text {
-        position: relative;
-        width: 90%;
-        line-height: 1.3em;
-        font-size: 1.8em;
-    }
-}
-
-
-@media only screen and (max-height: 736px) {
-    .basics__landing-content {
-        grid-template-rows: 3fr 3fr 1fr;
-        height: 90%;
-        padding-top: 10px;
-    }
-
-    .basics__landing-content p {
-        font-size: 12pt;
-        line-height: 18pt;
-    }
-
-    .basics__landing-content a {
-        font-size: 12pt;
-        padding: 0;
-    }
-
-    #basics__landing-button {
-        margin: 0;
-    }
-
-    /*** Transition Slide ***/
-
-    .transition-slide p {
-        line-height: revert;
-    }
-
-    .transition-slide__image img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .speech-bubble-left {
-        padding-left: 25px;
-        height: 80%;
-    }
-
-    .speech-bubble-right {
-        height: 80%;
-    }
-
-    .reinhard-image {
-        padding-bottom: 70px;
-    }
-
-    .martin-image {
-        padding-bottom: 70px;
-    }
-
-    .reinhard-message {
-        font-size: 9pt;
-        line-height: 20pt;
-    }
-
-    .martin-message {
-        font-size: 9pt;
-        line-height: 20pt;
-    }
-
-
-    /*** Carousel ***/
-
-    .carousel__basics {
-        height: 40%;
-    }
-}
-
-@media only screen and (max-height: 640px) {
-
-    #basics__landing-info {
-        font-size: 2.5em;
-    }
-
-
-    .slide__question-text {
-        position: relative;
-        width: 90%;
-        line-height: 1.1em;
-        font-size: 1.5em;
-    }
-
-
-    /*** Carousel ***/
-    .carousel__basics-nav {
-        height: 25vh;
-
-        height: calc(var(--vh, 1vh)* 25); /*Height with custom CSS Property scaling content to the actual height.*/
-    }
-
-    .carousel__track-container {
-        height: 60vh;
-
-        height: calc(var(--vh, 1vh)* 60); /*Height with custom CSS Property scaling content to the actual height.*/
-    }
-
-
-    .carousel__nav-content {
-        height: 10vh;
-        grid-template-rows: 3vh 7vh;
-        grid-template-columns: 1fr 2fr 1fr;
-
-        height: calc(var(--vh, 1vh)* 10); /*Height with custom CSS Property scaling content to the actual height.*/
-        grid-template-rows: calc(var(--vh, 1vh)* 3) calc(var(--vh, 1vh)* 7);
-    }
-
-    .carousel__indicator {
-        width: 8px;
-        height: 8px;
-    }
-
-
-    .carousel__button {
-        height: 80%;
-        width: 100%;
-        margin-top: 10%;
-    }
-
-    .fa, .far, .fas {
-        font-size: 0.6em;
-    }
-
-
-    /*** Transition Slide ***/
-
-    .transition-slide {
-        padding: 10px;
-        align-content: start;
-        grid-template-rows: auto auto;
-    }
-
-    .transition-slide__image img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .speech-bubble-left {
-        padding-left: 25px;
-        height: 90%;
-    }
-
-    .speech-bubble-right {
-        height: 90%;
-    }
-
-    .reinhard-image {
-        padding-bottom: 70px;
-    }
-
-    .martin-image {
-        padding-bottom: 70px;
-    }
-
-    .reinhard-message {
-        font-size: 7pt;
-        line-height: 14pt;
-    }
-
-    .martin-message {
-        font-size: 7pt;
-        line-height: 14pt;
-    }
-
-
-
-    /***    contact    ***/
-
-
-    .contact__content {
-        height: 60vh;
-        grid-template-rows: 20vh 40vh;
-        grid-template-areas: "score message"
-                             "mail mail";
-    }
-
-    .contact__message p {
-        font-size: 1.2em;
-    }
-
 }
 
 /*** iPad Pro 11 ***/
-@media only screen and (min-width: 834px) and (max-width: 1194px){
+@media only screen and (min-width: 834px) and (max-width: 1450px){ /*** former max-width: 1194px ***/
 
     /*** Landing ***/
 
@@ -1505,5 +1276,252 @@ body {
         font-size: 22pt;
         line-height: 24pt;
     }
+}
+
+
+@media only screen and (max-width: 1160px) {
+
+    .contact__message {
+        grid-template-rows: 1fr 4fr;
+    }
+
+    .contact__message h3 {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .carousel__indicator {
+        width: 10px;
+        height: 10px;
+        pointer-events: none;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .carousel__basics {
+        margin: 0 auto 20px;
+        align-self: end;
+        height: 60%;
+    }
+
+    .slide__question-text {
+        position: relative;
+        width: 90%;
+        line-height: 1.1em;
+        font-size: 2.0em;
+    }
+
+    .slide__choices-subtext {
+        font-size: 1.0em;
+        hyphens: manual;
+        word-wrap: break-word;
+        line-height: 1.1em;
+        grid-gap: 1%;
+    }
 
 }
+
+@media only screen and (max-width: 400px) {
+
+    .carousel__basics {
+        margin: 0 auto 20px;
+        align-self: end;
+        height: 40%;
+    }
+
+    .slide__question-text {
+        position: relative;
+        width: 90%;
+        line-height: 1.3em;
+        font-size: 1.8em;
+    }
+}
+
+
+@media only screen and (max-height: 736px) {
+    .basics__landing-content {
+        grid-template-rows: 3fr 3fr 1fr;
+        height: 90%;
+        padding-top: 10px;
+    }
+
+    .basics__landing-content p {
+        font-size: 12pt;
+        line-height: 18pt;
+    }
+
+    .basics__landing-content a {
+        font-size: 12pt;
+        padding: 0;
+    }
+
+    #basics__landing-button {
+        margin: 0;
+    }
+
+    /*** Transition Slide ***/
+
+    .transition-slide p {
+        line-height: revert;
+    }
+
+    .transition-slide__image img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .speech-bubble-left {
+        padding-left: 25px;
+        height: 80%;
+    }
+
+    .speech-bubble-right {
+        height: 80%;
+    }
+
+    .reinhard-image {
+        padding-bottom: 70px;
+    }
+
+    .martin-image {
+        padding-bottom: 70px;
+    }
+
+    .reinhard-message {
+        font-size: 9pt;
+        line-height: 20pt;
+    }
+
+    .martin-message {
+        font-size: 9pt;
+        line-height: 20pt;
+    }
+
+
+    /*** Carousel ***/
+
+    .carousel__basics {
+        height: 40%;
+    }
+}
+
+@media only screen and (max-height: 780px) and (orientation: portrait) {
+
+    #basics__landing-info {
+        font-size: 2.5em;
+    }
+
+
+    .slide__question-text {
+        position: relative;
+        width: 90%;
+        line-height: 1.1em;
+        font-size: 1.5em;
+    }
+
+
+    /*** Carousel ***/
+    .carousel__basics-nav {
+        height: 25vh;
+
+        height: calc(var(--vh, 1vh)* 25); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
+    .carousel__track-container {
+        height: 60vh;
+
+        height: calc(var(--vh, 1vh)* 60); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
+
+    .carousel__nav-content {
+        height: 10vh;
+        grid-template-rows: 3vh 7vh;
+        grid-template-columns: 1fr 2fr 1fr;
+
+        height: calc(var(--vh, 1vh)* 10); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 3) calc(var(--vh, 1vh)* 7);
+    }
+
+    .carousel__indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+
+    .carousel__button {
+        height: 80%;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .fa, .far, .fas {
+        font-size: 0.6em;
+    }
+
+
+    /*** Transition Slide ***/
+
+    .transition-slide {
+        padding: 10px;
+        align-content: start;
+        grid-template-rows: auto auto;
+    }
+
+    .transition-slide__image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .speech-bubble-left {
+        padding-left: 25px;
+        height: 90%;
+    }
+
+    .speech-bubble-right {
+        height: 90%;
+    }
+
+    .reinhard-image {
+        padding-bottom: 70px;
+    }
+
+    .martin-image {
+        padding-bottom: 70px;
+    }
+
+    .reinhard-message {
+        font-size: 7pt;
+        line-height: 14pt;
+    }
+
+    .martin-message {
+        font-size: 7pt;
+        line-height: 14pt;
+    }
+
+
+    /***    contact    ***/
+
+    .contact__content {
+        height: 60vh;
+        grid-template-rows: 20vh 40vh;
+        grid-template-areas: "score message"
+                             "mail mail";
+    }
+
+    .contact__mail h2{
+        font-size: 1.8em;
+    }
+
+    #contact__base-info {
+        font-size: 1.4em;
+    }
+}
+
+
