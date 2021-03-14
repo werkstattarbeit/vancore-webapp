@@ -186,7 +186,7 @@ body {
 }
 
 .carousel__indicator-checked {
-    background-color: #48E5C2;
+    background-color: #48e5c2;
 }
 
 .carousel__indicator-missed {
@@ -497,7 +497,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 27.5vh 27.5vh;
     grid-template-areas:    "message score mail"
-                            "img score mail";
+                            "message score mail";
     height: 55vh;
     width: 100%;
 }
@@ -506,7 +506,7 @@ body {
     grid-area: message;
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
     text-align: center;
     background-color: #E1F0FF;
 }
@@ -529,51 +529,64 @@ body {
     text-align: left;
 }
 
-.contact__img {
-    grid-area: img;
-}
-
-.contact__img img {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-}
-
 .contact__score {
     grid-area: score;
     background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: title ;
     font-family:  GT Walsheim Bold, Poppins, sans serif;
     font-weight: 800;
 }
 
+.contact__score h2 {
+    align-self: center;
+    font-size: 2.2em;
+    line-height: 0.9em;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
 
-#your-score {
-    width: 100%;
+#your-score-result {
+    align-self: center;
 }
 
 #error-message {
+    align-self: center;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
     font-size: 1.6em;
     line-height: 1.2em;
 }
 
-.contact__score p {
-    font-size: 2em;
-    line-height: 2em;
-    text-align: center;
-    align-self: center;
-    padding-top: 30%;
-}
-
-
 #final-score{
+    align-self: center;
     margin: 0 auto;
     min-width: 30%;
     max-width: 66%;
     text-align: center;
-    font-size: 10em;
+    font-size: 7em;
     line-height:1em;
-    border-bottom: 5px solid;
     padding: 0;
+}
+
+#progress-bar {
+    align-self: center;
+    margin: 0 auto;
+    min-width: 30%;
+    max-width: 66%;
+    height: 10px;
+    background: #f2f2f2;
+}
+
+#progress-value{
+    float: left;
+    margin: 0 auto;
+    width: 80%;
+    height: 10px;
+    background: #48e5c2;
 }
 
 
@@ -943,16 +956,6 @@ body {
         grid-template-rows: calc(var(--vh, 1vh)* 15) calc(var(--vh, 1vh)* 25) calc(var(--vh, 1vh)* 25); /*Grid-Rows with custom CSS Property scaling content to the actual height.*/
     }
 
-    .contact__overscroll{
-        height: 5000px;
-        overflow-y: auto;
-        background: red;
-    }
-
-    .contact__img {
-        display: none;
-    }
-
     .contact__message {
         grid-template-rows: 8vh 17vh;
         height: 100%;
@@ -978,6 +981,11 @@ body {
         background: #ffffff;
         height: 100%;
         width: 100vw;
+        grid-template-rows: 1fr;
+    }
+
+    .contact__score h2 {
+        display: none;
     }
 
     #error-message {
@@ -985,33 +993,18 @@ body {
         font-size: 1.4em;
         line-height: 1em;
         text-align: center;
-        padding-top: 20px;
-    }
-
-    #your-score {
-        width: 100vw;
-    }
-
-    #your-score-text {
-        width: 50vw;
-        position: relative;
-        float: left;
-        text-align: center;
-        font-size: 1.4em;
-        line-height: 1em;
-        padding-top: 30px;
     }
 
     #final-score {
-        position: relative;
-        float: right;
-        text-align: center;
-        padding-top: 20px;
-        margin-right: 10vw;
-        min-width: 30vw;
-        max-width: 48vw;
-        font-size: 8vh;
-        line-height: 1em;
+        font-size: 6em;
+    }
+
+    #progress-bar {
+
+    }
+
+    #progress-value{
+
     }
 
     .contact__mail {
@@ -1283,10 +1276,6 @@ body {
         grid-template-rows: 20vh 40vh;
         grid-template-areas: "score message"
                              "mail mail";
-    }
-
-    .contact__img {
-        display: none;
     }
 
     .contact__message p {

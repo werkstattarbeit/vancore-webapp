@@ -8,7 +8,8 @@ const dots = Array.from(dotsNav.children);
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 // Initialise and update score once
-let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
+/*let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];*/
+let scores = [null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5];
 updateFinalScore()
 
 // arrange slides next  to another
@@ -158,20 +159,35 @@ function updateFinalScore() {
     // Update final score
     let currentScore = calculateChanges()
 
-    const yourScore = document.getElementById('your-score');
+    const finalScoreWrapper = document.getElementById('final-score-wrapper');
     const finalScore = document.getElementById('final-score');
     const errorMessage = document.getElementById('error-message');
 
     if (scores.includes(0)) {
         errorMessage.innerHTML= "Bitte beantworten Sie alle Fragen.";
 
-        yourScore.classList.add("is-hidden");
+        finalScoreWrapper.classList.add("is-hidden");
         errorMessage.classList.remove("is-hidden");
     } else {
         finalScore.innerHTML= currentScore+"%";
+        updateScoreBar(currentScore);
 
-        yourScore.classList.remove("is-hidden");
+        finalScoreWrapper.classList.remove("is-hidden");
         errorMessage.classList.add("is-hidden");
+    }
+}
+
+// Update ScoreBar and progress color
+function updateScoreBar(currentScore) {
+    const scoreBar = document.getElementById('progress-value');
+    scoreBar.style.width = currentScore + "%";
+
+    if (currentScore >= 85) {
+        scoreBar.style.background = "#48e5c2";
+    } else if (currentScore < 85 && currentScore >= 50) {
+        scoreBar.style.background = "#F7CE5B";
+    } else {
+        scoreBar.style.background = "#cd2254";
     }
 }
 
