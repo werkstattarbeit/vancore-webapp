@@ -1405,10 +1405,16 @@ body {
     .carousel__basics {
         height: 40%;
     }
+
+    /*** Contact ***/
+
+    #final-score {
+        font-size: 4em;
+    }
 }
 
 /*Include iPhone 6,7,8 Plus devices*/
-@media only screen and (max-height: 650px) and (orientation: portrait) {
+@media only screen and (max-height: 600px) and (orientation: portrait) {
 
     #basics__landing-info {
         font-size: 2.5em;
