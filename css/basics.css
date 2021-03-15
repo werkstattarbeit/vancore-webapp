@@ -1089,12 +1089,6 @@ body {
         align-self: center;
     }
 
-    /* Seems not necessary */
-    /*.slide__choices-radio {
-        height: 5vh;
-        width: 5vh;
-    }*/
-
     .slide__choices-subtext {
         font-size: 2vh;
         hyphens: manual;
@@ -1103,9 +1097,7 @@ body {
         grid-gap: 1%;
     }
 
-
     /*** Transition Slides ***/
-
 
     .transition-slide {
         padding: 20px;
@@ -1169,9 +1161,7 @@ body {
         opacity: 0;
     }
 
-
     /***       Contact Content       ***/
-
 
     .contact__content {
         height: 65vh;
@@ -1233,6 +1223,10 @@ body {
     .contact__mail {
         height: 100%;
         width: 100vw;
+    }
+
+    #contact__mail-wrapper{
+        align-self: start;
     }
 
     .contact__mail h2 {
