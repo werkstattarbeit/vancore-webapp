@@ -245,7 +245,7 @@ body {
 }
 
 .carousel__basics-letter {
-    height: 6vh;
+    height: 5vh;
     margin: 0 auto;
     align-self: center;
 }
@@ -1185,6 +1185,7 @@ body {
 
     #contact__message-wrapper {
         height: 100%;
+        width: 90%;
         grid-gap: 1vh;
     }
 
@@ -1227,8 +1228,7 @@ body {
 
     .contact__mail h2 {
         width: 90vw;
-        padding-left: 5vw;
-        padding-right: 5vw;
+        margin: 0 auto;
         text-align: center;
         font-size: 11pt;
         padding-top: 14pt;
@@ -1238,7 +1238,7 @@ body {
         font-size: 10pt;
         line-height: 14pt;
         margin: 0;
-        padding-left: 10vw
+        padding-left: 5vw
     }
 
     #contact__mail-button {
@@ -1249,8 +1249,8 @@ body {
     }
 
     #contact__mail-button a {
-        width: 80%;
-        margin-top: 0;
+        width: 90%;
+        margin: 0 5%;
     }
 }
 
@@ -1431,6 +1431,8 @@ body {
     #contact__mail-button a {
         font-size: 11pt;
         padding: 2px;
+        margin: 0 5%;
+        width: 90%;
     }
 }
 
