@@ -641,10 +641,6 @@ body {
     padding:0;
 }
 
-.contact__mail p {
-}
-
-
 #contact__mail-button a {
     display: inline-block;
     width: 40%;
@@ -681,7 +677,7 @@ body {
     .basics__landing {
         width: 100vw;
         height: 90vh; /*Fallback*/
-        top: 10vh;
+        top: 8vh;
         left: 0;
 
         height: calc(var(--vh, 1vh)* 90); /*Height with custom CSS Property scaling content to the actual height.*/
@@ -896,17 +892,17 @@ body {
     }
 }
 
-@media only screen and (max-width: 833px) and (orientation: portrait){
+@media only screen and (max-width: 833px){
 
     /*** Landing ***/
 
     .basics__landing {
         width: 100vw;
-        height: 90vh; /*Fallback*/
-        top: 10vh;
+        height: 100vh; /*Fallback*/
+        top: 8vh;
         left: 0;
 
-        height: calc(var(--vh, 1vh)* 90); /*Height with custom CSS Property scaling content to the actual height.*/
+        height: calc(var(--vh, 1vh)* 100); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
     .basics__landing-content {
@@ -1360,7 +1356,7 @@ body {
 @media only screen and (max-height: 736px){
     .basics__landing-content {
         grid-template-rows: 3fr 3fr 1fr;
-        height: 90%;
+        height: 80%;
         padding-top: 10px;
     }
 
@@ -1439,7 +1435,7 @@ body {
 }
 
 /*Include iPhone 6,7,8 Plus devices*/
-@media only screen and (max-height: 680px) and (orientation: portrait) {
+@media only screen and (max-height: 680px){
 
     #basics__landing-info {
         font-size: 2.5em;
