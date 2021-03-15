@@ -1219,18 +1219,18 @@ body {
     .contact__mail {
         height: 100%;
         width: 100vw;
+        display: inline-block;
     }
 
     #contact__mail-wrapper{
-        align-self: start;
+        align-self: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 100%;
     }
 
     .contact__mail h2 {
-        width: 90vw;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 11pt;
-        padding-top: 14pt;
+        display: none;
     }
 
     #contact__base-info {
