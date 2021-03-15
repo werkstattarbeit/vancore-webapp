@@ -972,7 +972,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
 
     #subline {
         display: none !important;
