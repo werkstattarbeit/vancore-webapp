@@ -895,23 +895,22 @@ body {
 @media only screen and (max-width: 833px){
 
     /*** Landing ***/
-
     .basics__landing {
         width: 100vw;
-        height: 100vh; /*Fallback*/
+        height: 90vh; /*Fallback*/
         top: 8vh;
         left: 0;
 
-        height: calc(var(--vh, 1vh)* 100); /*Height with custom CSS Property scaling content to the actual height.*/
+        height: calc(var(--vh, 1vh)* 90); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
     .basics__landing-content {
-        margin-top: 20px;
+        margin-top: 10vh;
     }
 
     .basics__landing-content p {
         line-height: 22pt;
-        font-size: 16pt;
+        font-size: 14pt;
     }
 
     .basics__landing-content a {
@@ -921,14 +920,14 @@ body {
     }
 
     #basics__landing-button {
-        margin-top: 40px;
-        align-self: end;
+        align-self: center;
     }
+
 
     #basics__landing-info {
         top: unset;
         width: 20%;
-        bottom: 15px;
+        bottom: 20px;
         right: 50%;
         left: 50%;
         padding: 0;
@@ -1310,7 +1309,7 @@ body {
     }
 
     .basics__landing-content a {
-        font-size: 14pt;
+        font-size: 11pt;
         padding: 5px;
         width: 100px;
     }
