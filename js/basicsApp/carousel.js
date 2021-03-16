@@ -10,9 +10,9 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 // Initialise and update score once
 /*let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];*/
 /*let scores = [null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5];*/
-let scores = [null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,3,];
+/*let scores = [null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,3,];*/
 /*let scores = [null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,];*/
-/*let scores = [null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,];*/
+let scores = [null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,];
 updateFinalScore()
 
 // arrange slides next  to another
@@ -214,8 +214,8 @@ function updateMessage(currentScore) {
         msgMartin.innerHTML = 'Gehen Sie Entscheidungen gerne pragmatisch an? Ein wenig mehr Systematik gut tun.' + '<br> &mdash; Martin Moog';
     } else {
         statement.innerHTML = 'Welche sind Ihre dringenden strategischen Handlungsfelder?';
-        msgReinhard.innerHTML = 'Treffen Sie die richtigen Entscheidungen? Investieren Sie in die Qualität des Entscheidungsprozesses?' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Mmh, Ihre Firma ist erfolgreich? Glückwunsch, Sie machen intuitiv alles richtig oder aber haben viel Glück gehabt. Man kann auch ohne Strategie weit kommen!' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = ' Man kann auch ohne Strategie weit kommen. Aber mit Strategie vielleicht noch weiter?' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = 'Ist Ihre Firma erfolgreich? Dann machen Sie intuitiv alles richtig oder haben viel Glück! Lassen Sie uns reden!' + '<br> &mdash; Martin Moog';
     }
 }
 
