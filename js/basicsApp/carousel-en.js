@@ -9,10 +9,6 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 // Initialise and update score once
 let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
-/*let scores = [null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5];*/
-/*let scores = [null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,3,];*/
-/*let scores = [null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,];*/
-/*let scores = [null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,];*/
 updateFinalScore()
 
 // arrange slides next  to another
@@ -167,7 +163,7 @@ function updateFinalScore() {
     const errorMessage = document.getElementById('error-message');
 
     if (scores.includes(0)) {
-        errorMessage.innerHTML= "Bitte beantworten Sie alle Fragen.";
+        errorMessage.innerHTML= "Please answer all questions.";
 
         finalScoreWrapper.classList.add("is-hidden");
         errorMessage.classList.remove("is-hidden");
@@ -201,21 +197,21 @@ function updateMessage(currentScore) {
     const msgMartin = document.getElementById('contact__message-martin');
 
     if (currentScore >= 80) {
-        statement.innerHTML = 'Können Sie Ihre systematische Vorgehensweise effektiv im Unternehmen umsetzen?';
-        msgReinhard.innerHTML = 'Glückwunsch. Sie haben bereits eine hohe Reife in Ihrem Entscheidungsprozess.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Sie sitzen noch am Schreibtisch? Ab ins Grüne!' + '<br> &mdash; Martin Moog';
+        statement.innerHTML = 'Can you effectively implement your systematic approach in your company?';
+        msgReinhard.innerHTML = 'Congratulations. You already have a high level of maturity in your decision-making process.' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = 'Are you still at your desk? Take the day off!' + '<br> &mdash; Martin Moog';
     } else if (currentScore < 80 && currentScore >= 60) {
-        statement.innerHTML = 'Welche strategische Situation in Ihrem Umfeld verlangt nach mehr Systematik?';
-        msgReinhard.innerHTML = 'Sie gehen systematisch vor und berücksichtigen wesentliche Elemente im Entscheidungsprozess.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Ein solides Ergebnis mit Luft nach oben.' + '<br> &mdash; Martin Moog';
+        statement.innerHTML = 'Which strategic situation in your environment calls for a more systematic approach?';
+        msgReinhard.innerHTML = 'You proceed systematically and take essential elements into account in the decision-making process.' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = 'A solid result with room for improvement.' + '<br> &mdash; Martin Moog';
     }else if (currentScore < 60 && currentScore >= 40) {
-        statement.innerHTML = 'Welche sind Ihre dringenden strategischen Handlungsfelder?';
-        msgReinhard.innerHTML = 'Gute Ansätze sind vorhanden, es gibt für Sie aber Handlungspotenzial.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Gehen Sie Entscheidungen gerne pragmatisch an? Ein wenig mehr Systematik gut tun.' + '<br> &mdash; Martin Moog';
+        statement.innerHTML = 'What are your urgent strategic fields of action?';
+        msgReinhard.innerHTML = 'You´re on the right track, but there potential areas of improvement' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = 'Do you like to approach decisions pragmatically? A little more systematic approach will go a long way.' + '<br> &mdash; Martin Moog';
     } else {
-        statement.innerHTML = 'Lassen Sie uns reden!';
-        msgReinhard.innerHTML = ' Man kann auch ohne Strategie weit kommen. Aber mit Strategie vielleicht noch weiter?' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Ist Ihre Firma erfolgreich? Dann machen Sie intuitiv alles richtig oder haben viel Glück! Lassen Sie uns reden!' + '<br> &mdash; Martin Moog';
+        statement.innerHTML = 'Let´s Talk!';
+        msgReinhard.innerHTML = 'Are you making the right decisions? Are you investing in the quality of the decision-making process?' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = 'Is your company successful? Then you intuitively do everything right or you have been very lucky!' + '<br> &mdash; Martin Moog';
     }
 }
 
@@ -382,7 +378,7 @@ const basicsButtonText = document.getElementById("basics__landing-button-text");
 const basicsLandingInfo = document.getElementById('basics__landing-info');
 
 basicsLandingInfo.addEventListener('click', e => {
-    basicsButtonText.innerHTML = "Weiter geht's!";
+    basicsButtonText.innerHTML = "Continue";
     basicsLanding.classList.remove('is-hidden');
 });
 
