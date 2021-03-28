@@ -922,6 +922,11 @@ body {
         font-size: 14pt;
     }
 
+    #basics__landing-text3 p{
+        font-size: 10pt;
+        line-height: 12pt;
+    }
+
     .basics__landing-content a {
         font-size: 16pt;
         padding: 5px;
