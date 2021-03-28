@@ -8,11 +8,11 @@ const dots = Array.from(dotsNav.children);
 const slideWidth = slides[0].getBoundingClientRect().width;
 
 // Initialise and update score once
-let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
+/*let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];*/
 /*let scores = [null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5,null,5,5,5];*/
 /*let scores = [null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,4,null,4,4,3,];*/
 /*let scores = [null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,null,3,3,3,];*/
-/*let scores = [null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,];*/
+let scores = [null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,null,1,1,1,];
 updateFinalScore()
 
 // arrange slides next  to another
@@ -202,20 +202,20 @@ function updateMessage(currentScore) {
 
     if (currentScore >= 80) {
         statement.innerHTML = 'Können Sie Ihre systematische Vorgehensweise effektiv im Unternehmen umsetzen?';
-        msgReinhard.innerHTML = 'Glückwunsch. Sie haben bereits eine hohe Reife in Ihrem Entscheidungsprozess.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Sie sitzen noch am Schreibtisch? Ab ins Grüne!' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"Glückwunsch. Sie haben bereits eine hohe Reife in Ihrem Entscheidungsprozess."' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"Sie sitzen noch am Schreibtisch? Ab ins Grüne!"' + '<br> &mdash; Martin Moog';
     } else if (currentScore < 80 && currentScore >= 60) {
         statement.innerHTML = 'Welche strategische Situation in Ihrem Umfeld verlangt nach mehr Systematik?';
-        msgReinhard.innerHTML = 'Sie gehen systematisch vor und berücksichtigen wesentliche Elemente im Entscheidungsprozess.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Ein solides Ergebnis mit Luft nach oben.' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"Sie gehen systematisch vor und berücksichtigen wesentliche Elemente im Entscheidungsprozess."' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"Ein solides Ergebnis mit Luft nach oben."' + '<br> &mdash; Martin Moog';
     }else if (currentScore < 60 && currentScore >= 40) {
         statement.innerHTML = 'Welche sind Ihre dringenden strategischen Handlungsfelder?';
-        msgReinhard.innerHTML = 'Gute Ansätze sind vorhanden, es gibt für Sie aber Handlungspotenzial.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Gehen Sie Entscheidungen gerne pragmatisch an? Ein wenig mehr Systematik gut tun.' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"Gute Ansätze sind vorhanden, es gibt für Sie aber Handlungspotenzial."' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"Gehen Sie Entscheidungen gerne pragmatisch an? Ein wenig mehr Systematik gut tun."' + '<br> &mdash; Martin Moog';
     } else {
         statement.innerHTML = 'Lassen Sie uns reden!';
-        msgReinhard.innerHTML = ' Man kann auch ohne Strategie weit kommen. Aber mit Strategie vielleicht noch weiter?' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Ist Ihre Firma erfolgreich? Dann machen Sie intuitiv alles richtig oder haben viel Glück! Lassen Sie uns reden!' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"Man kann auch ohne Strategie weit kommen. Aber mit Strategie vielleicht noch weiter?"' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"Ist Ihre Firma erfolgreich? Dann machen Sie intuitiv alles richtig oder haben viel Glück! Lassen Sie uns reden!"' + '<br> &mdash; Martin Moog';
     }
 }
 

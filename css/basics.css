@@ -70,6 +70,10 @@ body {
     grid-area: landing-text2;
 }
 
+#basics__landing-text3 p{
+    font-size: 16pt;
+}
+
 #basics__landing-button {
     grid-area: landing-button;
     align-self: center;

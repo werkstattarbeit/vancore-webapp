@@ -747,14 +747,6 @@ strong {
     padding-top: 80px;
 }
 
-.basics-info-wrapper {
-    padding-top: 40px;
-	display: grid;
-    grid-template-areas: "basics-left basics-right";
-    grid-gap: 10%;
-    width: 100%;
-}
-
 .basics-info-box {
     display: grid;
     grid-template-areas: "basics-info-text"
@@ -795,15 +787,6 @@ strong {
 
 .basics-info-link a:hover {
     background-color: #ACC0FF;
-}
-
-#basics-info-box-left {
-    grid-area: basics-left;
-
-}
-
-#basics-info-box-right {
-    grid-area: basics-right;
 }
 
 
@@ -978,12 +961,6 @@ footer {
         display: none !important;
     }
 
-
-    /*BASICS INFO*/
-    .basics-info-wrapper {
-        grid-template-areas:    "basics-right"
-        "basics-left";
-    }
 
     .basics-info-box {
         width: 250px;

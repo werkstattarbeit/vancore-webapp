@@ -198,20 +198,20 @@ function updateMessage(currentScore) {
 
     if (currentScore >= 80) {
         statement.innerHTML = 'Can you effectively implement your systematic approach in your company?';
-        msgReinhard.innerHTML = 'Congratulations. You already have a high level of maturity in your decision-making process.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Are you still at your desk? Take the day off!' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"Congratulations. You already have a high level of maturity in your decision-making process."' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"Are you still at your desk? Take the day off!"' + '<br> &mdash; Martin Moog';
     } else if (currentScore < 80 && currentScore >= 60) {
         statement.innerHTML = 'Which strategic situation in your environment calls for a more systematic approach?';
-        msgReinhard.innerHTML = 'You proceed systematically and take essential elements into account in the decision-making process.' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'A solid result with room for improvement.' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"You proceed systematically and take essential elements into account in the decision-making process."' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"A solid result with room for improvement."' + '<br> &mdash; Martin Moog';
     }else if (currentScore < 60 && currentScore >= 40) {
         statement.innerHTML = 'What are your urgent strategic fields of action?';
-        msgReinhard.innerHTML = 'You´re on the right track, but there potential areas of improvement' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Do you like to approach decisions pragmatically? A little more systematic approach will go a long way.' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"You´re on the right track, but there potential areas of improvement."' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"Do you like to approach decisions pragmatically? A little more systematic approach will go a long way."' + '<br> &mdash; Martin Moog';
     } else {
         statement.innerHTML = 'Let´s Talk!';
-        msgReinhard.innerHTML = 'Are you making the right decisions? Are you investing in the quality of the decision-making process?' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = 'Is your company successful? Then you intuitively do everything right or you have been very lucky!' + '<br> &mdash; Martin Moog';
+        msgReinhard.innerHTML = '"Are you making the right decisions? Are you investing in the quality of the decision-making process?"' + '<br> &mdash; Reinhard Vanhöfen';
+        msgMartin.innerHTML = '"Is your company successful? Then you intuitively do everything right or you have been very lucky!"' + '<br> &mdash; Martin Moog';
     }
 }
 
