@@ -63,7 +63,7 @@ const updateMail = () => {
     let body = "\n" + "\n" + "\n" +
 
         "--------------------------------------------------------------" + "\n" +
-        "Main Ergebnis" +
+        "Mein Ergebnis" +
         "\n" +
         "\n" +
         printQuestionsWithAnswers() +
