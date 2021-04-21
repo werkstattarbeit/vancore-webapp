@@ -5,7 +5,7 @@ const prevButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
 
-const slideWidth = slides[0].getBoundingClientRect().width;
+/*const slideWidth = slides[0].getBoundingClientRect().width;*/
 
 // Initialise and update score once
 let scores = [null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0];
@@ -17,10 +17,19 @@ updateFinalScore()
 
 // arrange slides next  to another
 const setSlidePosition = (slide, index) => {
+    let slideWidth = slides[0].getBoundingClientRect().width;
     slide.style.left = slideWidth * index + 'px';
 }
 
 slides.forEach(setSlidePosition);
+
+$(window).resize(function() {
+    console.log("resize")
+    slides.forEach(setSlidePosition);
+
+    const currentSlide = track.querySelector('.current-slide');
+    moveToSlide(track, currentSlide, currentSlide);
+});
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
