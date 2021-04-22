@@ -1544,6 +1544,19 @@ body {
 }
 
 @media only screen and (max-height: 600px) and (orientation: portrait) {
+    .basics__landing-content {
+        padding-top: 0;
+    }
+
+    #basics__landing-text3 p {
+        font-size: 10pt;
+        line-height: 11pt;
+    }
+
+    .basics__landing-content p {
+        font-size: 11pt;
+        line-height: 13pt;
+    }
 
     .carousel__basics-nav {
         height: 25vh;
@@ -1563,6 +1576,42 @@ body {
         grid-template-rows: 20vh 40vh;
         grid-template-areas: "score message"
                              "mail mail";
+    }
+}
+
+/* iPhone 5 */
+@media only screen and (max-height: 500px) and (orientation: portrait) {
+    .basics__landing-content {
+        padding-top: 0;
+    }
+
+    #basics__landing-text3 p {
+        font-size: 9pt;
+        line-height: 10pt;
+    }
+
+    .basics__landing-content p {
+        font-size: 10pt;
+        line-height: 12pt;
+    }
+
+    #basics__landing-info {
+        font-size: 2em;
+        bottom: 10px;
+    }
+
+    .transition-slide p {
+        font-size: 1.2em;
+        line-height: 1.1em;
+    }
+
+    .carousel__basics-nav {
+        height: 27vh;
+        height: calc(var(--vh, 1vh)* 27);
+    }
+
+    .carousel__basics {
+        height: 20%;
     }
 }
 
