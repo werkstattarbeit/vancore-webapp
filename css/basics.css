@@ -272,7 +272,7 @@ body {
 .basics__term-text {
     margin: 0 auto;
     font-size: 13pt;
-    color: #ACC0FF;
+    color: #5e7aff;
     line-height: normal;
 }
 
@@ -724,7 +724,7 @@ body {
     }
 
     #basics__landing-info {
-        bottom: 40px;
+        bottom: 5%;
     }
 
     #basics__landing-info img {
@@ -746,23 +746,10 @@ body {
         grid-template-rows: calc(var(--vh, 1vh) * 30) calc(var(--vh, 1vh) * 60) calc(var(--vh, 1vh) * 10);
     }
 
-    .carousel__basics-letter{
-        height: 6vh;
-        padding-top: 20px;
-    }
-
-    .carousel__basics-nav {
-        align-items: center;
-    }
-
     .carousel__track-container {
         grid-area: track-container;
         height: 65vh;
         height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
-    }
-
-    .basics__term-text{
-        display: none;
     }
 
     .carousel__indicator-pagenumber {
@@ -848,7 +835,10 @@ body {
         height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
-
+    .carousel__basics-letter{
+        height: 6vh;
+        padding-top: 20px;
+    }
 
     .basics__term {
         height: 5vh;
@@ -912,6 +902,10 @@ body {
         height: calc(var(--vh, 1vh)* 90); /*Height with custom CSS Property scaling content to the actual height.*/
     }
 
+    .basics__term-text{
+        display: none;
+    }
+
     .basics__landing-content {
         margin-top: 10vh;
     }
@@ -938,6 +932,7 @@ body {
 
 
     #basics__landing-info {
+        font-size: 2em;
         top: unset;
         width: 20%;
         bottom: 20px;
@@ -1060,6 +1055,8 @@ body {
     .carousel__basics {
         margin: 0 auto;
         align-self: end;
+        top: 15vh;
+        z-index: 1; /*fix to put elements above slide-content*/
         height: 8vh;
         height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
 
@@ -1120,8 +1117,8 @@ body {
     }
 
     .transition-slide__image img{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .reinhard-image {
@@ -1365,7 +1362,7 @@ body {
     }
 }
 
-@media only screen and (max-height: 736px){
+@media only screen and (max-height: 736px) and (orientation: portrait){
     .basics__landing-content {
         grid-template-rows: 3fr 3fr 1fr;
         height: 80%;
@@ -1448,8 +1445,126 @@ body {
     }
 }
 
+
+@media only screen and (max-height: 680px) and (orientation: landscape) {
+    .carousel__basics-nav{
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .basics__term {
+        height: 0;
+        display: none;
+    }
+
+    .transition-slide {
+        padding: 20px;
+    }
+
+    .transition-slide__reinhard {
+        grid-template-columns: 15% 85%;
+    }
+
+    .transition-slide__martin {
+        grid-template-columns: 85% 15%;
+    }
+
+    .transition-slide__image img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .reinhard-image {
+        padding-left: 10px;
+        padding-bottom: 100px;
+        z-index: 80;
+    }
+
+    .martin-image {
+        padding-right: 10px;
+        padding-bottom: 100px;
+    }
+
+    .reinhard-message {
+        width: 100%;
+        font-size: 9pt;
+        line-height: 14pt;
+        text-align: left;
+    }
+
+    .speech-bubble-left {
+        padding-left: 40px;
+    }
+
+    .martin-message {
+        width: 100%;
+        font-size: 9pt;
+        line-height: 14pt;
+        text-align: left;
+    }
+
+    .speech-bubble-left {
+        height: auto;
+    }
+
+    .speech-bubble-right {
+        height: auto;
+    }
+
+    .speech-bubble-right:after {
+        opacity: 0;
+    }
+
+    .speech-bubble-left:after {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    /*** Transition Slide ***/
+
+    .transition-slide {
+        padding: 10px;
+        align-content: center;
+        grid-template-rows: auto auto;
+    }
+
+    .transition-slide__image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .speech-bubble-left {
+        padding-left: 25px;
+        height: 90%;
+    }
+
+    .speech-bubble-right {
+        height: 90%;
+    }
+
+    .reinhard-image {
+        padding-bottom: 70px;
+    }
+
+    .martin-image {
+        padding-bottom: 70px;
+    }
+
+    .reinhard-message {
+        font-size: 7pt;
+        line-height: 14pt;
+    }
+
+    .martin-message {
+        font-size: 7pt;
+        line-height: 14pt;
+    }
+}
+
+
 /*Include iPhone 6,7,8 Plus devices*/
-@media only screen and (max-height: 680px){
+@media only screen and (max-height: 680px) and (orientation: portrait) {
 
     #basics__landing-info {
         font-size: 2.5em;
@@ -1506,7 +1621,7 @@ body {
 
     .transition-slide {
         padding: 10px;
-        align-content: start;
+        align-content: center;
         grid-template-rows: auto auto;
     }
 
