@@ -23,13 +23,30 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
+/*Resize event*/
+var rtime;
+var timeout = false;
+var delta = 200;
 $(window).resize(function() {
-    console.log("resize")
-    slides.forEach(setSlidePosition);
-
-    const currentSlide = track.querySelector('.current-slide');
-    moveToSlide(track, currentSlide, currentSlide);
+    rtime = new Date();
+    if (timeout === false) {
+        timeout = true;
+        setTimeout(resizeend, delta);
+    }
 });
+
+function resizeend() {
+    if (new Date() - rtime < delta) {
+        setTimeout(resizeend, delta);
+    } else {
+        timeout = false;
+        console.log("resize")
+        slides.forEach(setSlidePosition);
+
+        const currentSlide = track.querySelector('.current-slide');
+        moveToSlide(track, currentSlide, currentSlide);
+    }
+}
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
