@@ -510,7 +510,7 @@ body {
     grid-area: message;
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 0.5fr 3.5fr;
+    grid-template-rows: 1fr 2.5fr 1.5fr ;
     text-align: center;
     background-color: #E1F0FF;
     justify-self: center;
@@ -527,8 +527,8 @@ body {
 
 .contact__message h3{
     align-self: center;
-    font-size: 1.6em;
-    line-height: 1.4em;
+    font-size: 1.4em;
+    line-height: 1.2em;
     text-align: left;
     width: 80%;
     margin: 0 auto;
@@ -537,7 +537,6 @@ body {
 #contact__message-wrapper{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 2vh;
     margin: 0 auto;
     width: 80%;
     align-self: center;
@@ -890,6 +889,12 @@ body {
     .slide__question-text {
         font-size: 22pt;
         line-height: 24pt;
+    }
+
+    /*** contact slide ***/
+    .contact__message p {
+        font-size: 1.2em;
+        line-height: 1.2em;
     }
 }
 
@@ -1282,6 +1287,27 @@ body {
     .contact__message h3 {
         display: none;
     }
+
+    .contact__message {
+        grid-template-rows: 1fr 4fr;
+    }
+
+    .contact__message p {
+        font-size: 1.2em;
+        line-height: 1.2em
+    }
+
+    .contact__message h2 {
+        font-size: 1.8em;
+    }
+
+    .contact__score h2 {
+        font-size: 1.8em;
+    }
+
+    .contact__mail h2 {
+        font-size: 1.8em;
+    }
 }
 
 
@@ -1451,6 +1477,39 @@ body {
         padding: 2px;
         margin: 0 5%;
         width: 90%;
+    }
+}
+
+@media only screen and (max-height: 720px) and (orientation: landscape) {
+    /* Contact Slide */
+
+    .contact__message {
+        grid-template-rows: 1fr 4fr;
+    }
+
+    .contact__message h3 {
+        display: none;
+    }
+
+    .contact__message {
+        grid-template-rows: 1fr 4fr;
+    }
+
+    .contact__message p {
+        font-size: 1.2em;
+        line-height: 1.2em
+    }
+
+    .contact__message h2 {
+        font-size: 1.8em;
+    }
+
+    .contact__score h2 {
+        font-size: 1.8em;
+    }
+
+    .contact__mail h2 {
+        font-size: 1.8em;
     }
 }
 
