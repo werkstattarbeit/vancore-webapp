@@ -1466,6 +1466,12 @@ body {
         display: none;
     }
 
+    .slide__choices {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    /* Transition Slides */
+
     .transition-slide {
         padding: 20px;
     }
