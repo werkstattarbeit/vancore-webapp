@@ -220,7 +220,7 @@ function updateMessage(currentScore) {
     }else if (currentScore < 60 && currentScore >= 40) {
         statement.innerHTML = 'Welche sind Ihre dringenden strategischen Handlungsfelder?';
         msgReinhard.innerHTML = '"Gute Ansätze sind vorhanden, es gibt für Sie aber Handlungspotenzial."' + '<br> &mdash; Reinhard Vanhöfen';
-        msgMartin.innerHTML = '"Gehen Sie Entscheidungen gerne pragmatisch an? Ein wenig mehr Systematik gut tun."' + '<br> &mdash; Martin Moog';
+        msgMartin.innerHTML = '"Gehen Sie Entscheidungen gerne pragmatisch an? Ein wenig mehr Systematik guttun."' + '<br> &mdash; Martin Moog';
     } else {
         statement.innerHTML = 'Lassen Sie uns reden!';
         msgReinhard.innerHTML = '"Man kann auch ohne Strategie weit kommen. Aber mit Strategie vielleicht noch weiter?"' + '<br> &mdash; Reinhard Vanhöfen';
