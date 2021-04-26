@@ -22,6 +22,31 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
+/*Resize event*/
+var rtime;
+var timeout = false;
+var delta = 200;
+$(window).resize(function() {
+    rtime = new Date();
+    if (timeout === false) {
+        timeout = true;
+        setTimeout(resizeend, delta);
+    }
+});
+
+function resizeend() {
+    if (new Date() - rtime < delta) {
+        setTimeout(resizeend, delta);
+    } else {
+        timeout = false;
+        console.log("resize")
+        slides.forEach(setSlidePosition);
+
+        const currentSlide = track.querySelector('.current-slide');
+        moveToSlide(track, currentSlide, currentSlide);
+    }
+}
+
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
@@ -70,7 +95,7 @@ const goLeft = () => {
     moveToSlide(track, currentSlide, prevSlide);
     updateDots(currentDot, prevDot);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
-    updatePagenumber(prevIndex);
+    /*updatePagenumber(prevIndex);*/
     setContactPageStyle(prevIndex);
     updateMissedDots(prevIndex);
 };
@@ -92,7 +117,7 @@ const goRight = () => {
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
-    updatePagenumber(nextIndex);
+    /*updatePagenumber(nextIndex);*/
     setContactPageStyle(nextIndex);
     updateMissedDots(nextIndex);
 }
@@ -284,18 +309,18 @@ const updateBasics = (targetIndex) => {
     }
 };
 
-
-/************************/
-/*                      */
-/*  Update Pagenumber   */
-/*                      */
-/************************/
+/*
+/!************************!/
+/!*                      *!/
+/!*  Update Pagenumber   *!/
+/!*                      *!/
+/!************************!/
 
 const updatePagenumber = (targetIndex) => {
     const currentPageNumber = document.getElementById('carousel__indicator-pagenumber');
     const index = targetIndex + 1;
     currentPageNumber.innerHTML= index;
-};
+};*/
 
 /************************/
 /*                      */
@@ -325,21 +350,21 @@ const setContactPageStyle = (currentIndex) => {
     const navContent        = document.querySelector(".carousel__nav-content"); // display: none
     const carousel          = document.querySelector(".carousel");
     const arrowLeft         = document.querySelector("#arrow-left");
-    const pageNumber        = document.querySelector(".carousel__indicator-pagenumber");
+    /*const pageNumber        = document.querySelector(".carousel__indicator-pagenumber");*/
 
     if(currentIndex === slides.length - 1) {
         console.log(currentIndex, ":\t last page reached.");
         carousel.style.background = "#1A2247";
         navContent.style.background = "#1A2247";
         arrowLeft.src="img/arrow-left-white.svg"
-        pageNumber.style.color = "#ffffff"
+        /*pageNumber.style.color = "#ffffff"*/
     }
     else {
         console.log(currentIndex, ":\t not last page");
         carousel.style.background = "#E1F0FF";
         navContent.style.background = "#E1F0FF";
         arrowLeft.src="img/arrow-left.svg"
-        pageNumber.style.color = "#5e7aff"
+        /*pageNumber.style.color = "#5e7aff"*/
     }
 };
 
