@@ -831,8 +831,11 @@ body {
     }
 
     .carousel__basics {
+        margin: 0 auto;
+        z-index: 1; /*fix to put elements above slide-content*/
         height: 8vh;
         height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
+
     }
 
     .carousel__basics-letter{
@@ -959,13 +962,13 @@ body {
         top: 0;
         overflow: hidden;
         background: #E1F0FF;
-        grid-template-rows: 25vh 60vh 10vh;
+        grid-template-rows: 35vh 55vh 10vh;
         grid-template-areas: "basics-nav"
                             "track-container"
                             "nav-content";
 
         height: calc(var(--vh, 1vh)* 100); /*Height with custom CSS Property scaling content to the actual height.*/
-        grid-template-rows: calc(var(--vh, 1vh)* 30) calc(var(--vh, 1vh)* 60) calc(var(--vh, 1vh)* 10);
+        grid-template-rows: calc(var(--vh, 1vh)* 35) calc(var(--vh, 1vh)* 55) calc(var(--vh, 1vh)* 10);
 
     }
 
@@ -1055,7 +1058,6 @@ body {
     .carousel__basics {
         margin: 0 auto;
         align-self: end;
-        top: 15vh;
         z-index: 1; /*fix to put elements above slide-content*/
         height: 8vh;
         height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
@@ -1169,7 +1171,7 @@ body {
     /***       Contact Content       ***/
 
     .contact__content {
-        height: 65vh;
+        height: 100vh;
         width: 100vw;
         grid-template-columns: 1fr;
         grid-template-rows: 15vh 25vh 25vh;
@@ -1520,7 +1522,8 @@ body {
     }
 }
 
-@media only screen and (max-height: 600px) and (orientation: landscape) {
+@media only screen and (max-height: 620px) and (orientation: landscape) {
+
     /*** Transition Slide ***/
 
     .transition-slide {

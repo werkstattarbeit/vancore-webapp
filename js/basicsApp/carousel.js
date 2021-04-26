@@ -79,13 +79,14 @@ const goLeft = () => {
     moveToSlide(track, currentSlide, prevSlide);
     updateDots(currentDot, prevDot);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
-    updatePagenumber(prevIndex);
+    //updatePagenumber(prevIndex);
     setContactPageStyle(prevIndex);
     updateMissedDots(prevIndex);
 };
+
 // click left
 prevButton.addEventListener('click', e => {
-    goLeft()
+    goLeft();
 });
 
 
@@ -101,13 +102,14 @@ const goRight = () => {
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
-    updatePagenumber(nextIndex);
+    //updatePagenumber(nextIndex);
     setContactPageStyle(nextIndex);
     updateMissedDots(nextIndex);
 }
+
 // click right
 nextButton.addEventListener('click', e => {
-    goRight()
+    goRight();
 });
 
 
@@ -300,11 +302,11 @@ const updateBasics = (targetIndex) => {
 /*                      */
 /************************/
 
-const updatePagenumber = (targetIndex) => {
+/*const updatePagenumber = (targetIndex) => {
     const currentPageNumber = document.getElementById('carousel__indicator-pagenumber');
     const index = targetIndex + 1;
     currentPageNumber.innerHTML= index;
-};
+};*/
 
 /************************/
 /*                      */
@@ -331,24 +333,25 @@ const updateProgressbar = () => {
 /************************/
 
 const setContactPageStyle = (currentIndex) => {
+    console.log("eval: setting contact page style")
     const navContent        = document.querySelector(".carousel__nav-content"); // display: none
     const carousel          = document.querySelector(".carousel");
     const arrowLeft         = document.querySelector("#arrow-left");
-    const pageNumber        = document.querySelector(".carousel__indicator-pagenumber");
+    //const pageNumber        = document.querySelector(".carousel__indicator-pagenumber");
 
     if(currentIndex === slides.length - 1) {
         console.log(currentIndex, ":\t last page reached.");
         carousel.style.background = "#1A2247";
         navContent.style.background = "#1A2247";
         arrowLeft.src="img/arrow-left-white.svg"
-        pageNumber.style.color = "#ffffff"
+        //pageNumber.style.color = "#ffffff"
     }
     else {
         console.log(currentIndex, ":\t not last page");
         carousel.style.background = "#E1F0FF";
         navContent.style.background = "#E1F0FF";
         arrowLeft.src="img/arrow-left.svg"
-        pageNumber.style.color = "#5e7aff"
+        //pageNumber.style.color = "#5e7aff"
     }
 };
 
