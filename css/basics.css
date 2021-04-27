@@ -672,6 +672,38 @@ body {
 /***********************************/
 
 
+@media only screen and (max-width: 1160px) {
+
+    .contact__message {
+        grid-template-rows: 1fr 4fr;
+    }
+
+    .contact__message h3 {
+        display: none;
+    }
+
+    .contact__message {
+        grid-template-rows: 1fr 4fr;
+    }
+
+    .contact__message p {
+        font-size: 1.2em;
+        line-height: 1.2em
+    }
+
+    .contact__message h2 {
+        font-size: 1.8em;
+    }
+
+    .contact__score h2 {
+        font-size: 1.8em;
+    }
+
+    .contact__mail h2 {
+        font-size: 1.8em;
+    }
+}
+
 /*** iPad Pro 11 ***/
 @media only screen and (min-width: 834px) and (max-width: 1450px){ /*** former max-width: 1194px ***/
 
@@ -1271,45 +1303,6 @@ body {
 }
 
 
-@media only screen and (max-width: 833px) and (max-height: 620px) {
-    .carousel__basics {
-        top: 15vh;
-        z-index: 1;
-    }
-}
-
-@media only screen and (max-width: 1160px) {
-
-    .contact__message {
-        grid-template-rows: 1fr 4fr;
-    }
-
-    .contact__message h3 {
-        display: none;
-    }
-
-    .contact__message {
-        grid-template-rows: 1fr 4fr;
-    }
-
-    .contact__message p {
-        font-size: 1.2em;
-        line-height: 1.2em
-    }
-
-    .contact__message h2 {
-        font-size: 1.8em;
-    }
-
-    .contact__score h2 {
-        font-size: 1.8em;
-    }
-
-    .contact__mail h2 {
-        font-size: 1.8em;
-    }
-}
-
 
 @media only screen and (max-width: 600px) {
 
@@ -1691,7 +1684,6 @@ body {
         font-size: 0.6em;
     }
 
-
     /*** Transition Slide ***/
 
     .transition-slide {
@@ -1733,7 +1725,7 @@ body {
     }
 }
 
-@media only screen and (max-height: 600px) and (orientation: portrait) {
+@media only screen and (max-height: 600px){
     .basics__landing-content {
         padding-top: 0;
     }
@@ -1801,7 +1793,7 @@ body {
     }
 
     .carousel__basics {
-        height: 20%;
+        height: 60%;
     }
 }
 
