@@ -34,7 +34,7 @@ body {
     width: 80%;
     height: 80%;
     margin: 0 auto;
-    margin-top: 8%;
+    margin-top: 6%;
 }
 
 .basics__landing-content p {
@@ -267,6 +267,7 @@ body {
     display: grid;
     align-self: start;
     grid-template-columns: repeat(6, 1fr);
+    z-index: 98;
 }
 
 .basics__term-text {
@@ -705,7 +706,7 @@ body {
 }
 
 /*** iPad Pro 11 ***/
-@media only screen and (min-width: 834px) and (max-width: 1450px){ /*** former max-width: 1194px ***/
+@media only screen and (min-width: 834px) and (max-width: 1450px) and (min-height: 600px){ /*** former max-width: 1194px ***/
 
     /*** Landing ***/
 
@@ -927,6 +928,378 @@ body {
     .contact__message p {
         font-size: 1.2em;
         line-height: 1.2em;
+    }
+}
+
+@media only screen and (min-width: 834px) and (max-height: 600px){
+
+    /*** Landing ***/
+    .basics__landing {
+        width: 100vw;
+        height: 90vh; /*Fallback*/
+        top: 10vh;
+        left: 0;
+
+        height: calc(var(--vh, 1vh)* 90); /*Height with custom CSS Property scaling content to the actual height.*/
+    }
+
+    .basics__term-text{
+        display: none;
+    }
+
+    .basics__landing-content {
+        margin-top: 10vh;
+    }
+
+    .basics__landing-content p {
+        line-height: 22pt;
+        font-size: 14pt;
+    }
+
+    #basics__landing-text3 p{
+        font-size: 10pt;
+        line-height: 12pt;
+    }
+
+    .basics__landing-content a {
+        font-size: 16pt;
+        padding: 5px;
+        width: 150px;
+    }
+
+    #basics__landing-button {
+        align-self: center;
+    }
+
+
+    #basics__landing-info {
+        font-size: 2em;
+        top: unset;
+        width: 20%;
+        bottom: 20px;
+        right: 50%;
+        left: 50%;
+        padding: 0;
+        margin-left: -10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+
+    #basics__landing-info img {
+        overflow: visible;
+    }
+
+    /*** Carousel ***/
+    body {
+        background: #E1F0FF;
+    }
+
+    .carousel {
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        overflow: hidden;
+        background: #E1F0FF;
+        grid-template-rows: 35vh 55vh 10vh;
+        grid-template-areas: "basics-nav"
+                            "track-container"
+                            "nav-content";
+
+        height: calc(var(--vh, 1vh)* 100); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 35) calc(var(--vh, 1vh)* 55) calc(var(--vh, 1vh)* 10);
+
+    }
+
+    .carousel__track-container {
+        grid-area: track-container;
+        height: 65vh;
+        height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
+
+    }
+
+    .carousel__indicator-pagenumber {
+        opacity: 0; /* Hiding the page number as per customer wish*/
+        position: relative;
+        margin: 0 auto;
+        align-self: center;
+        display: inline-block;
+        grid-area: pagenumber;
+    }
+
+    .carousel__nav-content {
+        grid-area: nav-content;
+        width: 90%;
+        height: 15vh;
+        margin: 0 auto;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 5vh 10vh;
+        grid-template-areas: "dots dots dots"
+        "button-left pagenumber button-right";
+
+        height: calc(var(--vh, 1vh)* 15); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 5) calc(var(--vh, 1vh)* 10);
+    }
+
+    .carousel__nav {
+        grid-area: dots;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-self: end;
+        grid-template-columns: repeat(25, 3%);
+        grid-template-rows: 1fr;
+        grid-gap: 1%;
+    }
+
+    .carousel__indicator {
+        width: 15px;
+        height: 15px;
+        overflow: revert;
+        pointer-events: none;
+    }
+
+    .fa, .far, .fas {
+        font-size: 0.8em;
+    }
+
+    .carousel__indicator-pagenumber {
+        font-size: 3vh;
+        height: 2vh;
+        margin: 0 auto;
+        bottom: 1.6em;
+        color: #5e7aff;
+    }
+
+    .carousel__button {
+        height: 100%;
+    }
+
+    .carousel__button img{
+        height: 100%;
+    }
+
+    /***           BASICS            ***/
+
+    .carousel__basics-nav {
+        grid-area: basic-nav;
+        position: relative;
+        width: 90vw;
+        height: 20vh;
+        padding-top: 0;
+        grid-template-rows: 1fr;
+        height: calc(var(--vh, 1vh)* 20); /*Height with custom CSS Property scaling content to the actual height.*/
+
+    }
+
+    .carousel__basics {
+        margin: 0 auto;
+        align-self: end;
+        z-index: 1; /*fix to put elements above slide-content*/
+        height: 8vh;
+        height: calc(var(--vh, 1vh)* 8); /*Height with custom CSS Property scaling content to the actual height.*/
+
+    }
+    .basics__term {
+        display: none;
+    }
+
+    /***       Slide Content         ***/
+
+
+    .slide__content {
+        height: 60vh;
+        grid-template-rows: 1fr 1fr;
+
+        height: calc(var(--vh, 1vh)* 60);
+    }
+
+    .slide__question {
+        height: revert;
+        width: 100%;
+    }
+
+    .slide__question-text {
+        position: relative;
+        width: 90%;
+        line-height: 4.0vh;
+        font-size: 3.8vh;
+    }
+
+    .slide__choices {
+        width: 95%;
+        margin: 0 auto;
+        grid-template-rows: 1fr 1fr;
+        align-self: center;
+    }
+
+    .slide__choices-subtext {
+        font-size: 2vh;
+        hyphens: manual;
+        word-wrap: break-word;
+        line-height: 1.1em;
+        grid-gap: 1%;
+    }
+
+    /*** Transition Slides ***/
+
+    .transition-slide {
+        padding: 20px;
+    }
+
+    .transition-slide__reinhard {
+        grid-template-columns: 15% 85%;
+    }
+
+    .transition-slide__martin {
+        grid-template-columns: 85% 15%;
+    }
+
+    .transition-slide__image img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .reinhard-image {
+        padding-left: 10px;
+        padding-bottom: 100px;
+        z-index: 80;
+    }
+
+    .martin-image {
+        padding-right: 10px;
+        padding-bottom: 100px;
+    }
+
+    .reinhard-message {
+        width: 100%;
+        font-size: 9pt;
+        line-height: 14pt;
+        text-align: left;
+    }
+
+    .speech-bubble-left {
+        padding-left: 40px;
+    }
+
+    .martin-message {
+        width: 100%;
+        font-size: 9pt;
+        line-height: 14pt;
+        text-align: left;
+    }
+
+    .speech-bubble-left {
+        height: auto;
+    }
+
+    .speech-bubble-right {
+        height: auto;
+    }
+
+    .speech-bubble-right:after {
+        opacity: 0;
+    }
+
+    .speech-bubble-left:after {
+        opacity: 0;
+    }
+
+    /***       Contact Content       ***/
+
+    .contact__content {
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh 25vh 25vh;
+        grid-template-areas: "score score"
+                            "message message"
+                            "mail mail";
+
+        height: calc(var(--vh, 1vh)* 65); /*Height with custom CSS Property scaling content to the actual height.*/
+        grid-template-rows: calc(var(--vh, 1vh)* 15) calc(var(--vh, 1vh)* 25) calc(var(--vh, 1vh)* 25); /*Grid-Rows with custom CSS Property scaling content to the actual height.*/
+    }
+
+    .contact__message {
+        display: inline-block;
+        height: 100%;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .contact__message h2 {
+        display: none;
+    }
+
+    #contact__message-wrapper {
+        height: 100%;
+        width: 90%;
+        grid-gap: 1vh;
+    }
+
+    .contact__message p {
+        font-size: 10pt;
+        line-height: 14pt;
+        text-align: center;
+    }
+
+    .contact__score {
+        background: #ffffff;
+        height: 100%;
+        width: 100vw;
+        grid-template-rows: 1fr;
+    }
+
+    .contact__score h2 {
+        display: none;
+    }
+
+    #error-message {
+        width: 100vw;
+        font-size: 1.4em;
+        line-height: 1em;
+        text-align: center;
+    }
+
+    #final-score {
+        font-size: 6em;
+    }
+
+    .contact__mail {
+        height: 100%;
+        width: 100vw;
+        display: inline-block;
+    }
+
+    #contact__mail-wrapper{
+        align-self: center;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 100%;
+    }
+
+    .contact__mail h2 {
+        display: none;
+    }
+
+    #contact__base-info {
+        font-size: 10pt;
+        line-height: 14pt;
+        margin: 0;
+        padding-left: 5vw
+    }
+
+    #contact__mail-button {
+        padding-top: 11pt;
+        align-content: center;
+        align-self: center;
+        align-items: center;
+    }
+
+    #contact__mail-button a {
+        width: 90%;
+        margin: 0 5%;
     }
 }
 
@@ -1474,6 +1847,7 @@ body {
 }
 
 @media only screen and (max-height: 720px) and (orientation: landscape) {
+
     /* Contact Slide */
 
     .contact__message {
