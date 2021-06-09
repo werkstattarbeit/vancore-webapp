@@ -481,8 +481,10 @@ body {
 
 .transition-slide__image img {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 22vh;
+    height: 22vh;
+    /*width: 200px;
+    height: 200px;*/
     border-radius: 50%;
     object-fit: cover;
     overflow: hidden;
@@ -1674,7 +1676,6 @@ body {
         margin: 0 5%;
     }
 }
-
 
 
 @media only screen and (max-width: 600px) {
