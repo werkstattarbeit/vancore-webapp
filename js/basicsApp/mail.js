@@ -44,7 +44,13 @@ const printQuestionsWithAnswers = () => {
 }
 
 const updateMail = () => {
-    coded = "d5WxjW@w5TjCuZ.xC"
+    /* Encryption script from https://dimentech.com/assets/obfuscator.html
+    *  To change the email address please visit the above link and put
+    *  in the desired address. Leave the "link text" free.
+    *  Copy and replace only the lines of javascript that corresponds
+    *  to the marked section below.
+    * */
+    coded = "d5WxjW@w5TjCuZ.xC" // first line to replce
     key = "rsnXDHYeJCaK0PiIbuWTF8cLZAR5vzGxSdq76yhjmBQlOw3VUN2k1Mof49ptEg"
     shift=coded.length
     link=""
@@ -57,7 +63,7 @@ const updateMail = () => {
             ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
             link += (key.charAt(ltr))
         }
-    }
+    } // last line to replace
     let betreff = "?subject=Kontaktaufnahme"
 
     let body = "\n" + "\n" + "\n" +
