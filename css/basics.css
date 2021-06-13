@@ -524,7 +524,7 @@ body {
     font-size: 2.2em;
     line-height: 0.9em;
     text-align: left;
-    width: 80%;
+    width: inherit;
     margin: 0 auto;
 }
 
@@ -696,6 +696,7 @@ body {
 
     .contact__message h2 {
         font-size: 1.8em;
+        width: inherit;
     }
 
     .contact__score h2 {
@@ -1882,6 +1883,7 @@ body {
 
     .contact__message h2 {
         font-size: 1.8em;
+        width: inherit;
     }
 
     .contact__score h2 {
