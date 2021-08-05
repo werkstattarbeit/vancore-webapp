@@ -1,0 +1,1069 @@
+@charset "UTF-8";
+
+/*FONT*/
+@font-face {
+    font-family: 'GT Walsheim Bold';
+    src: url('../font/gt-walsheim-bold-webfont.ttf') format('truetype');
+    font-family: 'GT Walsheim Light';
+    src: url('../font/gt-walsheim-regular-webfont.ttf') format('truetype');
+
+}
+
+/*BASIC*/
+
+/*MENU*/
+
+#no-landscape {
+    display: none
+}
+
+header {
+    position: fixed;
+    height: 80px;
+    background: #1A2247;
+    width: 100%;
+    z-index: 999;
+}
+
+#language {
+    position: fixed;
+    right: 2%;
+    top: 23px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 16px;
+}
+
+#language li {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    position: fixed;
+    width: 200px;
+    top: 22px;
+    left: 3%;
+    z-index: 999;
+}
+
+#subline {
+    position: fixed;
+    color: white;
+    left: 250px;
+    top: 23px;
+    padding-right: 10px;
+}
+
+.responsive_li {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: GT Walsheim Light, Poppins, sans serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #0000A0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: auto !important;
+}
+
+.margin_100 {
+    width: 100%;
+    height: 100px;
+    clear: both;
+}
+
+.margin_33vh {
+    width: 100%;
+    height: 33vh;
+    clear: both;
+}
+
+.fade-in {
+    position: relative;
+    z-index: 5;
+    background: #1A2247;
+    color: white;
+    top: -245px;
+    height: 210px;
+    padding-top: 60px;
+}
+
+/*HEADER*/
+
+/*IMAGE*/
+
+.infografik {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.resp {
+    display: none;
+}
+
+.icon {
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.circled {
+    width: 220px;
+    height: 220px;
+    border-radius: 110px;
+    background: none;
+    margin: 0 auto;
+    font-weight: 800;
+    line-height: 220px;
+    font-size: 1.3rem;
+}
+
+#fokus {
+    color: #5e7aff;
+    border: 2px solid #5e7aff;
+
+}
+
+.circle_resp {
+    width: 220px;
+    height: 220px;
+    border-radius: 110px;
+    margin: 25px auto;
+    line-height: 220px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+    font-weight: 800;
+    background: none;
+}
+
+#fokus_resp {
+    border: 2px solid #5e7aff;
+    color: #5e7aff;
+}
+
+.circled_solve {
+    display: none
+}
+
+#struktur {
+    color: white;
+    border: 2px solid white;
+}
+
+#struktur_resp {
+    color: white;
+    border: 2px solid white;
+}
+
+#haltung {
+    color: #44ffff;
+    border: 2px solid #44ffff;
+}
+
+
+#haltung_resp {
+    color: #44ffff;
+    border: 2px solid #44ffff;
+}
+
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.quote-brand {
+    height: 36px;
+    opacity: 0.3;
+    display: block;
+    margin: 0 auto;
+}
+
+.quote-brand-left {
+    height: 36px;
+    opacity: 0.3;
+    display: block;
+    margin: 0;
+}
+
+.quote-brand:hover {
+    opacity: 0.8;
+    transition: ease all 0.5s;
+}
+
+.quote-brand-left:hover {
+    opacity: 0.8;
+    transition: ease all 0.5s;
+}
+
+/*GRID SYSTEM*/
+
+section {
+    width: 100%;
+    margin: 0;
+    padding: 80px 0;
+    overflow: hidden;
+    display: table;
+    clear: both;
+}
+
+
+.content {
+    overflow: hidden;
+}
+
+.stage {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+
+.light {
+    background: #E1F0FF;
+    color: #0000A0;
+}
+
+.dark {
+    background: #1A2247;
+    color: white;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 3%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.col {
+    padding: 0 2%;
+    float: left;
+    box-sizing: border-box;
+    min-height: 1px;
+}
+
+.clear {
+    clear: both;
+}
+
+.one {
+    width: 8.33%;
+}
+
+.two {
+    width: 16.66%;
+}
+
+.three {
+    width: 25%;
+}
+
+.four {
+    width: 33.33%;
+}
+
+.five {
+    width: 41.65%;
+}
+
+.six {
+    width: 50%;
+}
+
+.seven {
+    width: 58.33%;
+}
+
+.eight {
+    width: 66.64%;
+}
+
+.nine {
+    width: 75%;
+}
+
+.ten {
+    width: 83.3%
+}
+
+.eleven {
+    width: 91.66%;
+}
+
+.twelve {
+    width: 100%;
+}
+
+/**/
+
+/*FONT STYLES*/
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: ease all 0.5s;
+
+}
+
+h1 {
+    font-size: 8.5rem;
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 4.2rem;
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-size: 2rem;
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+    font-weight: 800;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+}
+
+.bu {
+    text-align: center;
+}
+
+.copy_s {
+    font-size: 1rem !important;
+}
+
+.copy_m {
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+    font-weight: 800;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+
+.copy_l {
+    font-size: 1.8rem;
+}
+
+.bold {
+    font-weight: 800;
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+}
+
+.quote_light h3 {
+    font-size: 1.3rem;
+    margin: 0 auto 40px auto;
+    width: 80%;
+    border-bottom: 2px solid black;
+    padding: 0 0 25px 0;
+    font-weight: 500;
+}
+
+.quote_dark h3 {
+    font-size: 1.3rem;
+    margin: 0 auto 40px auto;
+    width: 80%;
+    border-bottom: 2px solid white;
+    padding: 0 0 25px 0;
+    font-weight: 500;
+}
+
+
+/**/
+
+/*MODULE*/
+
+#overscroll {
+    position: relative;
+    z-index: 1;
+    top: 100vh;
+    background: #fff;
+}
+
+/*START*/
+#start {
+    position: fixed;
+    z-index: 0;
+}
+
+/*INTRO*/
+#intro {
+    /*background-image:url(../links/stone.jpg);
+      background-size: calc(100% + 50px);
+    background-repeat:no-repeat;*/
+    color: #0000A0;
+
+}
+
+/*QUOTE*/
+
+.quote_light {
+    color: black;
+    text-align: center;
+    background: #f3f3f3;
+    height: 100vh;
+    padding: 0;
+}
+
+.quote_dark {
+    color: white;
+    text-align: center;
+    height: 100vh;
+}
+
+
+.button {
+    margin: 40px 0;
+    padding: 10px 20px;
+    border: 2px solid #0000FF;
+    background: none;
+    font-family: inherit;
+    font-size: 1em;
+    color: #0000FF;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.button:hover {
+    background: #0000FF;
+    color: white;
+    text-decoration: none !important;
+}
+
+
+/*WIR WISSEN*/
+.border {
+    padding: 0 0 20px 0;
+    border-bottom: 2px solid black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+}
+
+.black {
+    color: black !important;
+}
+
+#censor {
+    height: 14px;
+    width: 140px;
+    background: black;
+    display: inline-block;
+    margin-right: 6px;
+    float: left;
+    margin-top: 3px;
+}
+
+#tempofix {
+    background: white;
+    height: 80px;
+    padding-top: 80px;
+    width: 100%;
+    z-index: 5;
+}
+
+
+/* TEAM */
+
+.team {
+    padding: 12vh 0;
+    overflow: hidden;
+}
+
+.team.center {
+    text-align: center;
+}
+
+
+.team p {
+    margin-top: 0;
+}
+
+.team .social {
+    padding: 0;
+    margin: 0;
+}
+
+.team .social li {
+    text-decoration: underline;
+    font-family: GT Walsheim Bold, Poppins, sans serif;
+    font-weight: 800;
+    list-style: none;
+    padding: 0;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.team.center .social {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.team.center .social li {
+    width: 100%;
+    margin: 0;
+    clear: both;
+    text-align: center;
+}
+
+
+.team .social li:hover {
+    color: blue;
+    transition: all ease 0.5s;
+}
+
+.profil {
+    width: 220px;
+    height: 220px;
+    border-radius: 110px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto 25px auto;
+}
+
+
+#moog {
+    background-image: url(../links/team_moog.jpg)
+}
+
+#vanhoefen {
+    background-image: url(../links/team_vanhoefen.jpg)
+}
+
+#thiele {
+    background-image: url(../links/team_thiele.jpg)
+}
+
+#esser {
+    background-image: url(../links/team_esser.jpg)
+}
+
+#grimme {
+    background-image: url(../links/team_grimme.jpg)
+}
+
+#gww {
+    background-image: url(../links/team_gww.jpg)
+}
+
+#wegner {
+    background-image: url(../links/team_wegner.jpg)
+}
+
+#horn {
+    background-image: url(../links/team_horn.jpg)
+}
+
+#husmann {
+    background-image: url(../links/team_husmann.jpg)
+}
+
+#roellich {
+    background-image: url(../links/team_roellich.jpg)
+}
+
+#fourman {
+    background-image: url(../links/team_fourman.jpg)
+}
+
+#roellich {
+    background-image: url(../links/team_roellich.jpg)
+}
+
+#teichmann {
+    background-image: url(../links/team_teichmann.jpg)
+}
+
+#friedrich {
+    background-image: url(../links/team_friedrich.jpg)
+}
+
+#werner {
+    background-image: url(../links/team_werner.jpg)
+}
+
+#bruns {
+    background-image: url(../links/team_bruns.jpg)
+}
+
+
+/*LEISTUNG
+#leistung {
+    text-align:center;
+    }*/
+
+
+#wirbieten{
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 25px 0 25px 0;
+    border-top: 2px solid white;
+}
+
+#wasbringen{
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0 0 25px 0;
+}
+
+.detail_list {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.fokus {
+    color: #5e7aff;
+}
+
+.struktur {
+    color: #0040ff;
+}
+
+.haltung {
+    color: #44ffff;
+}
+
+.atomium {
+    width: 80%;
+    padding: 35% 0;;
+    border-radius: 50%;
+    position: relative;
+    mix-blend-mode: hard-light;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}
+
+.atomium:hover {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: 1px 1px 1px black;
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    transition: all ease 0.2s;
+    z-index: 5;
+}
+
+.atomium#fokus {
+    left: 22vw;
+}
+
+.atomium#struktur {
+    right: 22vw;
+}
+
+.atomium#haltung {
+    top: 30vh;
+}
+
+#leistung_01 {
+    color: #5e7aff
+}
+
+#leistung_02 {
+    color: #44ffff;
+}
+
+#leistung_03 {
+    color: #0042ff;
+}
+
+#atomium {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+
+/*BASICS-INFO*/
+
+#basics-new {
+    background-color: white;
+    color: #1A2247;
+    font-size: 9pt;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+#basics {
+    margin: 0 auto;
+}
+
+#basics {
+    height: auto;
+    position: relative;
+    padding-top: 80px;
+}
+
+.basics-info-box {
+    display: grid;
+    grid-template-areas: "basics-info-text"
+                         "basics-info-line"
+                         "basics-info-a";
+    width: 300px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.basics-info-box p {
+    grid-area: basics-info-text;
+    width: 100%;
+}
+
+.basics-info-box hr {
+    grid-area: basics-info-line;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.basics-info-link {
+    width: 100%;
+    position: relative;
+    grid-area: basics-info-a;
+}
+
+.basics-info-link a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: #5e7aff;
+    font-weight: 700;
+}
+
+.basics-info-link a:hover {
+    background-color: #ACC0FF;
+}
+
+
+/*KONTAKT*/
+
+#kontakt #kontaktmail {
+    margin-top: 0;
+}
+
+#map {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+/*FOOTER*/
+
+footer {
+    height: 10vh;
+    bottom: 0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.referenz {
+    display: block;
+    width: 50%;
+    opacity: 0.6;
+    padding: 100px 0;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+    #start {
+        position: absolute;
+    }
+
+    .fade-in {
+        top: -257px;
+    }
+
+    .circled_solve {
+        display: block;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .circled_solve {
+        display: none
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 3%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .col {
+        padding: 0 2%;
+        float: left;
+        box-sizing: border-box;
+        min-height: 1px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .one {
+        width: 0;
+    }
+
+    .two {
+        width: 16.6%;
+    }
+
+    .three {
+        width: 100%;
+    }
+
+    .four {
+        width: 100%;
+    }
+
+    .five {
+        width: 100%;
+    }
+
+    .six {
+        width: 100%;
+    }
+
+    .seven {
+        width: 100%;
+    }
+
+    .eight {
+        width: 100%;
+    }
+
+    .nine {
+        width: 100%;
+    }
+
+    .ten {
+        width: 100%
+    }
+
+    .eleven {
+        width: 100%;
+    }
+
+    .twelve {
+        width: 100%;
+    }
+
+
+    .quote_light h3 {
+        padding: 100px 0 25px 0;
+    }
+
+    .circled, .fade-in {
+        display: none;
+    }
+
+    .resp {
+        display: block;
+        margin-bottom: 100px;
+    }
+
+    .resp p {
+        text-align: center;
+    }
+
+    #subline {
+        left: 225px;
+    }
+
+    .profil {
+        margin-top: 50px
+    }
+
+    .team {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .team .social li {
+        float: none;
+        margin: 0;
+    }
+
+    #wirbieten{
+        padding: 25px 0 0px 25px;
+    }
+
+    #wasbringen{
+        padding: 25px 0 0px 25px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #subline {
+        display: none !important;
+    }
+
+
+    .basics-info-box {
+        width: 250px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #subline {
+        display: none;
+    }
+
+    #atomium {
+        width: 100%;
+    }
+
+    #language {
+        display: none;
+    }
+
+    .margin_33vh {
+        height: 15vh;
+    }
+
+    .margin_100 {
+        height: 30px;
+    }
+
+
+    .responsive_li {
+        display: block !important;
+        text-transform: uppercase;
+        margin-top: 50px !important;
+        font-size: 1rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    .container {
+        max-width: 94vw;
+    }
+
+    .copy_l {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 2.1rem;
+        line-height: 1.2
+    }
+
+    .quote_light {
+        padding-bottom: 80px;
+    }
+
+    .quote_light h3 {
+        width: 100%;
+        padding: 50px 0 25px 0;
+        margin: 0 auto 20px auto;
+    }
+
+    #tempofix {
+        height: 50px;
+    }
+
+
+    #wirbieten {
+        font-size: 1.5rem;
+    }
+
+    #wasbringen {
+        font-size: 1.5rem;
+    }
+
+    .team .copy_l {
+        margin-bottom: 0;
+    }
+
+    .team p {
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-height: 479px) and (orientation: landscape) {
+
+
+    #no-landscape {
+        display: block;
+        width: 94%;
+        height: 100vh;
+        background: #1a2247;
+        color: white;
+        position: fixed;
+        z-index: 1000;
+        text-align: center;
+        padding: 15vh 3% 0 3%;
+        margin: 0 auto;
+    }
+
+
+}
